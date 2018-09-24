@@ -1,30 +1,30 @@
-// class App extends React.Component {
-//   constructor (props) {
-//     super(props)
-//     this.state = {
-//       fruits: []
-//     }
-//   }
+import React from 'react'
+import {connect} from 'react-redux'
 
-//   componentDidMount () {
-//     getFruits()
-//       .then(fruits => {
-//         this.setState({fruits})
-//       })
-//   }
+import {getBets} from './actions'
 
-//   render () {
-//     return (
-//       <div className='app'>
-//         <h1>Fullstack Boilerplate</h1>
-//         <ul>
-//           {this.state.fruits.map(fruit => (
-//             <li key={fruit}>{fruit}</li>
-//           ))}
-//         </ul>
-//       </div>
-//     )
-//   }
-// }
+export class Bets extends React.Component {
+  // When component mounts it will run the action creator
+  // This will create the connection to the store
+  componentDidMount () {
+    getBets()
+  }
 
-// export default App
+  render () {
+    // This will be in the store
+    const {bets} = this.props
+
+    return (
+
+      <div>
+        <p>{bets}</p>
+      </div>
+    )
+  }
+}
+
+// Mapping state of bets to props to be able to use as props
+
+const mapStateToProps = ({bets}) => ({bets})
+
+export default connect(mapStateToProps)(Bets)
