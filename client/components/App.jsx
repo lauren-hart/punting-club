@@ -1,34 +1,32 @@
 import React from 'react'
+import {HashRouter as Router, Route} from 'react-router-dom'
 
-import {getFruits} from '../apiClient'
+// Functions  to pass to the back end for API requests
+// import {getFruits} from '../apiClient'
 
-class App extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      fruits: []
-    }
-  }
+// import './bootstrap.min.css'
+import Home from './Home'
+// import Bets from './Bets'
+// import Addbet from './AddBet'
+// import Members from './Members'
+// import Datacheck from './DataCheck'
+// import Leaderboard from './Leaderboard'
+// import EditBet from './EditBet'
 
-  componentDidMount () {
-    getFruits()
-      .then(fruits => {
-        this.setState({fruits})
-      })
-  }
-
+export default class App extends React.Component {
   render () {
     return (
-      <div className='app'>
-        <h1>Fullstack Boilerplate</h1>
-        <ul>
-          {this.state.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
+      <div className="App">
+        <Router>
+          <Route exact path='/' component={Home}/>
+          {/* <Route path='/bets' component={Bets} />
+          <Route path='/addbet' component={Addbet}/>
+          <Route path='/members' component={Members}/>
+          <Route path='/datacheck' component={Datacheck}/>
+          <Route exact path='/' component={Leaderboard}/>
+          <Route exact path='/editbet' component={EditBet}/> */}
+        </Router>
       </div>
     )
   }
 }
-
-export default App
