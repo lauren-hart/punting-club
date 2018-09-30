@@ -10,39 +10,42 @@ class CleanseData extends React.Component {
     this.state = {
     }
     this.convertToNumber = this.convertToNumber.bind(this)
+    this.didBetWin = this.didBetWin.bind(this)
   }
   componentDidMount () {
     this.props.dispatch(getBets())
   }
 
-  // cleanseAmountBet () {
-  //   const amountBet = this.props.rawBets && this.props.rawBets.map(list => {
-  //     return list.amountBet
-  //   })
-  // }
+  convertToNumber (amountBet) {
+    return <div>${Number(amountBet).toFixed(2)}</div>
+  }
 
-  // didBetWin (betAmount) {
-  //   const convertToNumber = Number(betAmount).toFixed(2)
-  //   if (isNaN(convertToNumber)) {
-  //     return <p>Not a winner</p>
-  //   } else {
-  //     return <p>${convertToNumber}</p>
-  //   }
-  // }
-
-  convertToNumber (number) {
-    return isNaN(number) ? Number(number).toFixed(2) : number
+  didBetWin (amountWon) {
+    return <div>{isNaN(amountWon) ? 'Not a winner' : this.convertToNumber(amountWon)}</div>
   }
 
   render () {
-    const amountBet = this.props.rawBets && this.props.rawBets.map(list => {
-      return <li key={list.id}>{this.convertToNumber(list.amountBet)}</li>
+    const data = this.props.rawBets && this.props.rawBets.map(list => {
+      return <tr key={list.id}>
+        <td>{this.convertToNumber(list.amountBet)}</td>
+        <td>{this.didBetWin(list.amountWon)}</td>
+      </tr>
     })
     return (
       <div>
         <Link to='/'><button>Home</button></Link>
         <h1>Cleanse Data</h1>
-        <ul>{amountBet}</ul>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Amount Bet</th>
+              <th scope="col">Amount Won</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data}
+          </tbody>
+        </table>
       </div>
     )
   }
