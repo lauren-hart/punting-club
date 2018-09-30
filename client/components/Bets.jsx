@@ -3,6 +3,7 @@ import React from 'react'
 import {getBets} from '../actions'
 import {connect} from 'react-redux'
 import BetsList from './BetsList'
+import {Link} from 'react-router-dom'
 
 class Bets extends React.Component {
   componentDidMount () {
@@ -12,6 +13,7 @@ class Bets extends React.Component {
   render () {
     return (
       <div>
+        <Link to='/'><button>Home</button></Link>
         <h1>Bets</h1>
         <table className="table">
           <thead>

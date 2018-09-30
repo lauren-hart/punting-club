@@ -108,7 +108,7 @@ exports.seed = (knex, Promise) => {
         {id: 4502, person: 'Tom', couple: 'Bielby/Hart', sport: '', bet: 'Brazil v Costa Rica 3801 Head to Head-Live bettingBelgium v Tunisia 3901 Head to Head-Live bettingGermany v Sweden 3961 Head to Head-Live bettingSpain v Morocco 4191 Head to Head-Live betting', amount_bet: '5', amount_won: 'Not winner', percentage: '', date: ''},
         {id: 4503, person: 'Tom', couple: 'Bielby/Hart', sport: '', bet: 'England v Panama 4023 1st Goal ScorerW Indies v S Lanka-3rd Test 8835 Head to Head', amount_bet: '1', amount_won: 'Not winner', percentage: '', date: ''},
         {id: 4504, person: 'Deposit', couple: 'Deposit', sport: '', bet: 'Deposit - INTERNET TP06', amount_bet: '270', amount_won: '0', percentage: '', date: ''},
-        {id: 4505, person: 'Free Bet', couple: 'Free Bet', sport: '', bet: 'Parramatta v Bulldogs 2303 Winning Team &amp; MarginCronulla v Canberra 2366 Points StartManly v Sydney 2756 Points StartCollingwood v Nth Melbourne 2836 Winning Team &amp; MarginEssendon v Fremantle 2848 Winning Team &amp; MarginGeelong v Melbourne 2860 Winning Team &amp; Margin', amount_bet: '5', amount_won: 'Not winner', percentage: '', date: ''},
+        {id: 4505, person: 'Free Bet', couple: 'Free Bet', sport: '', bet: 'Parramatta v Bulldogs 2303 Winning Team &amp; MarginCronulla v Canberra 2366 Points StartManly v Sydney 2756 Points StartCollingwood v Nth Melbourne 2836 Winning Team &amp; MarginEssendon v Fremantle 2848 Winning Team &amp; MarginGeelong v Melbourne 2860 Winning Team &amp; Margin', amount_bet: '5', amount_won: 'Not winner', percentage: '', date: ''}
       ])
     })
 }
