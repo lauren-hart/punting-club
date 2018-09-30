@@ -1,30 +1,45 @@
 import React from 'react'
+// import {Redirect} from 'react-router-dom'
+import {getBets} from '../actions'
 import {connect} from 'react-redux'
+import BetsList from './BetsList'
 
-import {getBets} from './actions'
-
-export class Bets extends React.Component {
-  // When component mounts it will run the action creator
-  // This will create the connection to the store
+class Bets extends React.Component {
   componentDidMount () {
-    getBets()
+    this.props.dispatch(getBets())
   }
 
   render () {
-    // This will be in the store
-    const {bets} = this.props
-
     return (
-
       <div>
-        <p>{bets}</p>
+        <h1>Bets</h1>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Couple</th>
+              <th scope="col">Bet</th>
+              <th scope="col">$ Bet</th>
+              <th scope="col">$ Won</th>
+              <th scope="col">%</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.bets && this.props.bets.map(list =>
+              <BetsList key={list.id} list={list}/>)}
+          </tbody>
+        </table>
       </div>
     )
   }
 }
 
-// Mapping state of bets to props to be able to use as props
+// export default Bets
 
-const mapStateToProps = ({bets}) => ({bets})
+const mapStateToProps = (state) => {
+  return {
+    bets: state.bets.bets
+  }
+}
 
 export default connect(mapStateToProps)(Bets)

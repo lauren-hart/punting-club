@@ -11,8 +11,8 @@ router.use(express.json())
 // we want the response to be a json object
 router.get('/', (req, res) => {
   db.getBets()
-    .then(bets => {
-      res.json({bets})
+    .then(result => {
+      res.json({result})
     })
 })
 
