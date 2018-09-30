@@ -1,7 +1,7 @@
 import {
-  GET_BETS_PENDING,
-  GET_BETS,
-  GET_BETS_ERROR} from '../actions/'
+  GET_RAWBETS_PENDING,
+  GET_RAWBETS,
+  GET_RAWBETS_ERROR} from '../actions/'
 
 const defaultState = {
   bets: null,
@@ -9,9 +9,9 @@ const defaultState = {
   pending: false
 }
 
-export default function (state = defaultState, {error, bets, type}) {
+export default function (state = defaultState, {error, rawBets, type}) {
   switch (type) {
-    case GET_BETS_PENDING:
+    case GET_RAWBETS_PENDING:
       return Object.assign({}, state, {error: null, pending: true})
 
       // return {
@@ -20,22 +20,22 @@ export default function (state = defaultState, {error, bets, type}) {
       //   pending: true
       // }
 
-    case GET_BETS:
-      return Object.assign({}, state, {error: null, pending: false, bets})
+    case GET_RAWBETS:
+      return Object.assign({}, state, {error: null, pending: false, rawBets})
 
       // return {
       //   ...state,
-      //   bets,
+      //   rawBets,
       //   error: null,
       //   pending: false
       // }
 
-    case GET_BETS_ERROR:
-      return Object.assign({}, state, {error, pending: false, bets: null})
+    case GET_RAWBETS_ERROR:
+      return Object.assign({}, state, {error, pending: false, rawBets: null})
 
       // return {
       //   ...state,
-      //   bets: null,
+      //   rawBets: null,
       //   error,
       //   pending: false
       // }

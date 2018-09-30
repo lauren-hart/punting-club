@@ -2,7 +2,6 @@ import React from 'react'
 // import {Redirect} from 'react-router-dom'
 import {getBets} from '../actions'
 import {connect} from 'react-redux'
-import BetsList from './BetsList'
 import {Link} from 'react-router-dom'
 
 class Bets extends React.Component {
@@ -10,12 +9,16 @@ class Bets extends React.Component {
     this.props.dispatch(getBets())
   }
 
+  // You are getting back the object of raw data
+  // you need to tidy it to put back in the store
+
   render () {
     return (
       <div>
         <Link to='/'><button>Home</button></Link>
+        <Link to='/cleansedata'><button>Cleanse Data</button></Link>
         <h1>Bets</h1>
-        <table className="table">
+        {/* <table className="table">
           <thead>
             <tr>
               <th scope="col">Couple</th>
@@ -27,10 +30,10 @@ class Bets extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.bets && this.props.bets.map(list =>
+            {this.props.rawBets && this.props.rawBets.map(list =>
               <BetsList key={list.id} list={list}/>)}
           </tbody>
-        </table>
+        </table> */}
       </div>
     )
   }
@@ -40,7 +43,7 @@ class Bets extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    bets: state.bets.bets
+    rawBets: state.bets.rawBets
   }
 }
 
