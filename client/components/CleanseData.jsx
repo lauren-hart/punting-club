@@ -8,29 +8,44 @@ class CleanseData extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
+      amountBet: [],
+      amountWon: [],
+      percentage: []
     }
-    this.convertToNumber = this.convertToNumber.bind(this)
-    this.didBetWin = this.didBetWin.bind(this)
-  }
-  componentDidMount () {
-    this.props.dispatch(getBets())
+    this.convertAmountBet = this.convertAmountBet.bind(this)
   }
 
-  convertToNumber (amountBet) {
-    return <div>${Number(amountBet).toFixed(2)}</div>
+  componentDidMount () {
+    this.props.dispatch(getBets())
+    this.convertAmountBet()
+  }
+
+  convertAmountBet () {
+    const data = this.props.rawBets && this.props.rawBets.map(list => {
+      return list.amountBet
+    })
+    console.log(data)
+    this.setState({
+      amountBet: data
+    })
   }
 
   didBetWin (amountWon) {
-    return <div>{isNaN(amountWon) ? 'Not a winner' : this.convertToNumber(amountWon)}</div>
+    return <div>{isNaN(amountWon) ? 'Not a winner' : this.convertAmountBet(amountWon)}</div>
   }
 
+  // convertAmountWonPercent (amountBet) {
+  //   const convertToNumber = Number(amountBet).toFixed(0)
+  //   return isNaN(convertToNumber) ? Number(0.00).toFixed(2) : convertToNumber
+  // }
+
   render () {
-    const data = this.props.rawBets && this.props.rawBets.map(list => {
-      return <tr key={list.id}>
-        <td>{this.convertToNumber(list.amountBet)}</td>
-        <td>{this.didBetWin(list.amountWon)}</td>
-      </tr>
-    })
+    // const data = this.props.rawBets && this.props.rawBets.map(list => {
+    //   return <tr key={list.id}>
+    //     <td>{this.convertAmountBet(list.amountBet)}</td>
+    //     <td>{this.didBetWin(list.amountWon)}</td>
+    //   </tr>
+    // })
     return (
       <div>
         <Link to='/'><button>Home</button></Link>
@@ -40,10 +55,12 @@ class CleanseData extends React.Component {
             <tr>
               <th scope="col">Amount Bet</th>
               <th scope="col">Amount Won</th>
+              <th scope="col">Percentage</th>
             </tr>
           </thead>
           <tbody>
-            {data}
+            <tr>
+            </tr>
           </tbody>
         </table>
       </div>
