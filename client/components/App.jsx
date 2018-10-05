@@ -6,7 +6,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 
 import Home from './Home'
 import Bets from './Bets'
-import CleanseData from './CleanseData'
+// import CleanseData from './CleanseData'
 // import Addbet from './AddBet'
 // import Members from './Members'
 // import Datacheck from './DataCheck'
@@ -21,7 +21,7 @@ export default class App extends React.Component {
           <div>
             <Route exact path='/' component={Home}/>
             <Route exact path='/bets' component={Bets} />
-            <Route exact path='/cleansedata' component={CleanseData} />
+            {/* <Route exact path='/cleansedata' component={CleanseData} /> */}
             {/* <Route path='/addbet' component={Addbet}/>
           <Route path='/members' component={Members}/>
           <Route path='/datacheck' component={Datacheck}/>

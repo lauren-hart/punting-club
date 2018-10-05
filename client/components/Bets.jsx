@@ -3,9 +3,11 @@ import React from 'react'
 import {getBets} from '../actions'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import BetsList from './BetsList'
 
 class Bets extends React.Component {
   componentDidMount () {
+    // triggering getBets action creator
     this.props.dispatch(getBets())
   }
 
@@ -16,9 +18,9 @@ class Bets extends React.Component {
     return (
       <div>
         <Link to='/'><button>Home</button></Link>
-        <Link to='/cleansedata'><button>Cleanse Data</button></Link>
+        {/* <Link to='/cleansedata'><button>Cleanse Data</button></Link> */}
         <h1>Bets</h1>
-        {/* <table className="table">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">Couple</th>
@@ -29,11 +31,11 @@ class Bets extends React.Component {
               <th scope="col">Date</th>
             </tr>
           </thead>
-          <tbody>
+          <div>
             {this.props.rawBets && this.props.rawBets.map(list =>
               <BetsList key={list.id} list={list}/>)}
-          </tbody>
-        </table> */}
+          </div>
+        </table>
       </div>
     )
   }
