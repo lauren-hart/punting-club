@@ -22,12 +22,9 @@ export function getBets () {
     return request
       .get(`/api/v1/bets`)
       .then(res => {
-        // eslint-disable-next-line no-console
-        console.log('before dispatch', res.body.result)
         dispatch(getRawBetsList(res.body.result))
         // eslint-disable-next-line no-console
         console.log('success')
-        console.log('I am in the redux store', res.body.result)
       })
       .catch(err => {
         dispatch(getBetsError(err.message))

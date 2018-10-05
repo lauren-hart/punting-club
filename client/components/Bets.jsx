@@ -18,7 +18,7 @@ class Bets extends React.Component {
     return (
       <div>
         <Link to='/'><button>Home</button></Link>
-        {/* <Link to='/cleansedata'><button>Cleanse Data</button></Link> */}
+        <Link to='/cleansedata'><button>Cleanse Data</button></Link>
         <h1>Bets</h1>
         <table className="table">
           <thead>
