@@ -31,10 +31,10 @@ class Bets extends React.Component {
               <th scope="col">Date</th>
             </tr>
           </thead>
-          <div>
+          <tbody>
             {this.props.rawBets && this.props.rawBets.map(list =>
               <BetsList key={list.id} list={list}/>)}
-          </div>
+          </tbody>
         </table>
       </div>
     )
