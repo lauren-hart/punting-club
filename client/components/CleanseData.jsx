@@ -3,6 +3,7 @@ import React from 'react'
 // import {getBets} from '../actions'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import {getBets} from '../actions'
 
 class CleanseData extends React.Component {
   constructor (props) {
@@ -16,7 +17,8 @@ class CleanseData extends React.Component {
   }
 
   componentDidMount () {
-    // this.convertAmountBet()
+    // triggering getBets action creator
+    this.props.dispatch(getBets())
   }
 
   render () {
