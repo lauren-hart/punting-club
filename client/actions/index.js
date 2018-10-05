@@ -8,7 +8,7 @@ export const getRawBetsPendng = () => ({type: GET_RAWBETS_PENDING})
 
 export const getRawBetsList = rawBets => ({
   type: GET_RAWBETS,
-  rawBets: rawBets
+  rawBets
 })
 
 export const getBetsError = error => ({

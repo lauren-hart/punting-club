@@ -19,33 +19,8 @@ class CleanseData extends React.Component {
     // this.convertAmountBet()
   }
 
-  // convertAmountBet () {
-  //   const data = this.props.rawBets && this.props.rawBets.map(list => {
-  //     return list.amountBet
-  //   })
-  //   console.log(data)
-  //   this.setState({
-  //     amountBet: data
-  //   })
-  // }
-
-  // didBetWin (amountWon) {
-  //   return <div>{isNaN(amountWon) ? 'Not a winner' : this.convertAmountBet(amountWon)}</div>
-  // }
-
-  // convertAmountWonPercent (amountBet) {
-  //   const convertToNumber = Number(amountBet).toFixed(0)
-  //   return isNaN(convertToNumber) ? Number(0.00).toFixed(2) : convertToNumber
-  // }
-
   render () {
     console.log(this.props.rawBets)
-    // const data = this.props.rawBets && this.props.rawBets.map(list => {
-    //   return <tr key={list.id}>
-    //     <td>{list.amountBet}</td>
-    //     <td>{this.didBetWin(list.amountWon)}</td>
-    //   </tr>
-    // })
     return (
       <div>
         <Link to='/'><button>Home</button></Link>
@@ -60,7 +35,7 @@ class CleanseData extends React.Component {
           </thead>
           <tbody>
             <tr>
-              {/* <th>{data}</th> */}
+              {/* <th>{this.props.}</th> */}
             </tr>
           </tbody>
         </table>
@@ -70,6 +45,7 @@ class CleanseData extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
     rawBets: state.bets.rawBets
   }

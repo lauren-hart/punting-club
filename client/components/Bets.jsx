@@ -11,9 +11,6 @@ class Bets extends React.Component {
     this.props.dispatch(getBets())
   }
 
-  // You are getting back the object of raw data
-  // you need to tidy it to put back in the store
-
   render () {
     return (
       <div>
