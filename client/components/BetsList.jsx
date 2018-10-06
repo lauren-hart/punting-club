@@ -14,7 +14,7 @@ const BetsList = (props) => {
       <td>{props.list.bet}</td>
       <td>${amountBet}</td>
       <td>${amountWon}</td>
-      <td>{percentage}%</td>
+      <td style={props.percentColour(percentage)}>{percentage}%</td>
       <td>{props.list.date}</td>
     </tr>
   )

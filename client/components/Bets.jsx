@@ -11,6 +11,25 @@ class Bets extends React.Component {
     this.props.dispatch(getBets())
   }
 
+  percentColour (betPercentage) {
+    const red = {background: '#EE3239', color: 'white'}
+    const yellow = {background: '#FEC748', color: 'white'}
+    const green = {background: '#499360', color: 'white'}
+    const purple = {background: '#632A7E', color: 'white'}
+
+    if (betPercentage < 50) {
+      return red
+    } else if (betPercentage < 100) {
+      return yellow
+    } else if (betPercentage < 200) {
+      return green
+    } else if (betPercentage > 200) {
+      return purple
+    } else {
+      return red
+    }
+  }
+
   render () {
     return (
       <div>
@@ -29,7 +48,7 @@ class Bets extends React.Component {
           </thead>
           <tbody>
             {this.props.rawBets && this.props.rawBets.map(list =>
-              <BetsList key={list.id} list={list}/>)}
+              <BetsList key={list.id} list={list} percentColour={this.percentColour}/>)}
           </tbody>
         </table>
 
