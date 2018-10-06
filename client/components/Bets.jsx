@@ -11,6 +11,7 @@ class Bets extends React.Component {
     this.props.dispatch(getBets())
   }
 
+  // Change the colour of percentage won based on percentage
   percentColour (betPercentage) {
     const red = {background: '#EE3239', color: 'white'}
     const yellow = {background: '#FEC748', color: 'white'}
@@ -44,6 +45,8 @@ class Bets extends React.Component {
               <th scope="col">$ Won</th>
               <th scope="col">%</th>
               <th scope="col">Date</th>
+              <th scope="col">Delete</th>
+              <th scope="col">Edit</th>
             </tr>
           </thead>
           <tbody>

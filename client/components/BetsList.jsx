@@ -16,6 +16,8 @@ const BetsList = (props) => {
       <td>${amountWon}</td>
       <td style={props.percentColour(percentage)}>{percentage}%</td>
       <td>{props.list.date}</td>
+      <td><button>x</button></td>
+      <td><button>Edit</button></td>
     </tr>
   )
 }
