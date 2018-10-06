@@ -1,5 +1,6 @@
 import React from 'react'
 import {deleteBet} from '../actions/index'
+import {connect} from 'react-redux'
 
 class BetsList extends React.Component {
   constructor (props) {
@@ -34,4 +35,10 @@ class BetsList extends React.Component {
   }
 }
 
-export default BetsList
+const mapStateToProps = (state) => {
+  return {
+    rawBets: state.bets.rawBets
+  }
+}
+
+export default connect(mapStateToProps)(BetsList)
