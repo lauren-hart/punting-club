@@ -16,6 +16,7 @@ export const getBetsError = error => ({
   error
 })
 
+// GET BETS
 export function getBets () {
   return (dispatch) => {
     dispatch(getRawBetsPendng())
@@ -32,6 +33,7 @@ export function getBets () {
   }
 }
 
+// DELETE BETS
 export function deleteBet (id) {
   return (dispatch) => {
     dispatch(getRawBetsPendng())
@@ -39,8 +41,9 @@ export function deleteBet (id) {
       .get(`/api/v1/bets/delete/${id}`)
       .then(res => {
         dispatch(getRawBetsList(res.body.result))
+        dispatch(getBets())
         // eslint-disable-next-line no-console
-        console.log('success')
+        console.log('deleting your bet')
       })
       .catch(err => {
         dispatch(getBetsError(err.message))

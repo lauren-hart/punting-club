@@ -1,5 +1,5 @@
 import React from 'react'
-import deleteBet from '../actions/index'
+import {deleteBet} from '../actions/index'
 
 class BetsList extends React.Component {
   constructor (props) {
@@ -10,7 +10,7 @@ class BetsList extends React.Component {
   }
 
   handleDelete (e) {
-    deleteBet(e.target.value)
+    this.props.dispatch(deleteBet(e.target.value))
   }
 
   render () {
