@@ -1,9 +1,6 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
-// Functions  to pass to the back end for API requests
-// import {getFruits} from '../apiClient'
-
 import Home from './Home'
 import Bets from './Bets'
 // import Addbet from './AddBet'

@@ -1,14 +1,20 @@
 import React from 'react'
-// import styles from './styles.css'
 
 const BetsList = (props) => {
+  const amountBet = Number(props.list.amountBet).toFixed(2)
+  const amountWon = isNaN(props.list.amountWon)
+    ? Number(0).toFixed(2)
+    : Number(props.list.amountWon).toFixed(2)
+  const percentage = isNaN(((amountWon / amountBet) * 100))
+    ? Number(0) : ((amountWon / amountBet) * 100).toFixed(0)
+
   return (
     <tr>
       <td>{props.list.person}</td>
       <td>{props.list.bet}</td>
-      <td>{props.list.amountBet}</td>
-      <td>{props.list.amountWon}</td>
-      <td>{props.list.percentage}</td>
+      <td>${amountBet}</td>
+      <td>${amountWon}</td>
+      <td>{percentage}%</td>
       <td>{props.list.date}</td>
     </tr>
   )
