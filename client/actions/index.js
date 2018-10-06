@@ -31,3 +31,19 @@ export function getBets () {
       })
   }
 }
+
+export function deleteBet (id) {
+  return (dispatch) => {
+    dispatch(getRawBetsPendng())
+    return request
+      .get(`/api/v1/bets/delete/${id}`)
+      .then(res => {
+        dispatch(getRawBetsList(res.body.result))
+        // eslint-disable-next-line no-console
+        console.log('success')
+      })
+      .catch(err => {
+        dispatch(getBetsError(err.message))
+      })
+  }
+}

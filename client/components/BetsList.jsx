@@ -1,8 +1,16 @@
 import React from 'react'
+import deleteBet from '../actions/index'
 
 class BetsList extends React.Component {
   constructor (props) {
     super(props)
+    this.state = {
+    }
+    this.handleDelete = this.handleDelete.bind(this)
+  }
+
+  handleDelete (e) {
+    deleteBet(e.target.value)
   }
 
   render () {
@@ -20,8 +28,7 @@ class BetsList extends React.Component {
         <td>${amountWon}</td>
         <td style={this.props.percentColour(percentage)}>{percentage}%</td>
         <td>{this.props.list.date}</td>
-        {/* <td><button onClick={this.betprops.handleDelete}>x</button></td> */}
-        <td><button>Delete</button></td>
+        <td><button value={this.props.list.id} onClick={this.handleDelete}>x</button></td>
       </tr>
     )
   }
