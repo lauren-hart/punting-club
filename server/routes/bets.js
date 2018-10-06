@@ -16,4 +16,21 @@ router.get('/', (req, res) => {
     })
 })
 
+router.delete('/delete/:id', (req, res) => {
+  const id = req.params.id
+  db.deleteBets(id)
+    .then(bet => {
+      res.status(200).json({
+        ok: true,
+        message: 'Product has been deleted.'
+      })
+    })
+    .catch(({message}) => {
+      res.status(500).json({
+        ok: false,
+        message
+      })
+    })
+})
+
 module.exports = router
