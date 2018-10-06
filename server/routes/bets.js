@@ -6,9 +6,8 @@ const router = express.Router()
 
 router.use(express.json())
 
-// API client has requested getBets from server
-// we are requesting a response from the db now
-// we want the response to be a json object
+// GET ROUTES (get bets)
+
 router.get('/', (req, res) => {
   db.getBets()
     .then(result => {
@@ -16,13 +15,15 @@ router.get('/', (req, res) => {
     })
 })
 
+// DELETE ROUTES (delete bet by id)
+
 router.delete('/delete/:id', (req, res) => {
   const id = req.params.id
   db.deleteBets(id)
     .then(bet => {
       res.status(200).json({
         ok: true,
-        message: 'Product has been deleted.'
+        message: 'Bet has been deleted.'
       })
     })
     .catch(({message}) => {
