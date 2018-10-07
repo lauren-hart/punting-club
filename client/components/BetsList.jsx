@@ -41,6 +41,10 @@ class BetsList extends React.Component {
             <td><input value={this.state.bet} placeholder={this.props.list.bet}></input></td>
             <td><input value={this.state.amountBet} placeholder={amountBet}></input></td>
             <td><input value={this.state.amountWon} placeholder={amountWon}></input></td>
+            <td></td>
+            <td><input value={this.state.date} placeholder={this.props.list.date}></input></td>
+            <td></td>
+            <td><button>Finish</button></td>
 
           </tr>
           : <tr>
