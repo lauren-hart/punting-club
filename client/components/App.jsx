@@ -3,7 +3,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 
 import Home from './Home'
 import Bets from './Bets'
-// import Addbet from './AddBet'
+import Addbet from './AddBet'
 // import Members from './Members'
 // import Datacheck from './DataCheck'
 // import Leaderboard from './Leaderboard'
@@ -17,8 +17,8 @@ export default class App extends React.Component {
           <div>
             <Route exact path='/' component={Home}/>
             <Route exact path='/bets' component={Bets} />
-            {/* <Route path='/addbet' component={Addbet}/>
-          <Route path='/members' component={Members}/>
+            <Route path='/addbet' component={Addbet}/>
+            {/* <Route path='/members' component={Members}/>
           <Route path='/datacheck' component={Datacheck}/>
           <Route exact path='/' component={Leaderboard}/>
           <Route exact path='/editbet' component={EditBet}/> */}
