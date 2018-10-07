@@ -41,6 +41,7 @@ class Bets extends React.Component {
           <thead>
             <tr>
               <th scope="col">Couple</th>
+              <th scope="col">Person</th>
               <th scope="col">Bet</th>
               <th scope="col">$ Bet</th>
               <th scope="col">$ Won</th>

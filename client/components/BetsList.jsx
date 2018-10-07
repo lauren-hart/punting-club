@@ -1,5 +1,5 @@
 import React from 'react'
-import {deleteBet} from '../actions/index'
+import {deleteBet, editBet} from '../actions/index'
 import {connect} from 'react-redux'
 
 class BetsList extends React.Component {
@@ -8,10 +8,15 @@ class BetsList extends React.Component {
     this.state = {
     }
     this.handleDelete = this.handleDelete.bind(this)
+    this.handleEdit = this.handleEdit.bind(this)
   }
 
   handleDelete (e) {
     this.props.dispatch(deleteBet(e.target.value))
+  }
+
+  handleEdit (e) {
+    this.props.dispatch(editBet(e.target.value))
   }
 
   render () {
@@ -23,6 +28,7 @@ class BetsList extends React.Component {
       ? Number(0) : ((amountWon / amountBet) * 100).toFixed(0)
     return (
       <tr>
+        <td>{this.props.list.couple}</td>
         <td>{this.props.list.person}</td>
         <td>{this.props.list.bet}</td>
         <td>${amountBet}</td>
@@ -30,6 +36,7 @@ class BetsList extends React.Component {
         <td style={this.props.percentColour(percentage)}>{percentage}%</td>
         <td>{this.props.list.date}</td>
         <td><button value={this.props.list.id} onClick={this.handleDelete}>x</button></td>
+        <td><button value={this.props.list.id} onClick={this.handleEdit}>Edit</button></td>
       </tr>
     )
   }
