@@ -3,6 +3,7 @@ import request from 'superagent'
 export const GET_RAWBETS_PENDING = 'GET_RAWBETS_PENDING'
 export const GET_RAWBETS = 'GET_RAWBETS'
 export const GET_RAWBETS_ERROR = 'GET_RAWBETS_ERROR'
+export const GET_EDIT_STATUS = 'GET_EDIT_STATUS'
 
 export const getRawBetsPendng = () => ({type: GET_RAWBETS_PENDING})
 
@@ -14,6 +15,11 @@ export const getRawBetsList = rawBets => ({
 export const getBetsError = error => ({
   type: GET_RAWBETS_ERROR,
   error
+})
+
+export const editBetStatus = rawBets => ({
+  type: GET_EDIT_STATUS,
+  editStatus
 })
 
 // GET BETS
@@ -57,6 +63,24 @@ export function addBet (bet) {
     dispatch(getRawBetsPendng())
     return request
       .post(`/api/v1/bets/addbet`, bet)
+      .then(res => {
+        dispatch(getRawBetsList(res.body.result))
+        dispatch(getBets())
+        // eslint-disable-next-line no-console
+        console.log('adding your bet')
+      })
+      .catch(err => {
+        dispatch(getBetsError(err.message))
+      })
+  }
+}
+
+// EDIT BET
+export function editBet (bet, edit) {
+  return (dispatch) => {
+    dispatch(getRawBetsPendng())
+    return request
+      .post(`/api/v1/bets/editbet`, bet)
       .then(res => {
         dispatch(getRawBetsList(res.body.result))
         dispatch(getBets())

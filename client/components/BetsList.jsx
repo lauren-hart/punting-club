@@ -1,11 +1,14 @@
 import React from 'react'
 import {deleteBet, editBet} from '../actions/index'
 import {connect} from 'react-redux'
+import Editbet from './Editbet'
+import {Redirect} from 'react-router-dom'
 
 class BetsList extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
+      edit: false
     }
     this.handleDelete = this.handleDelete.bind(this)
     this.handleEdit = this.handleEdit.bind(this)
@@ -16,7 +19,10 @@ class BetsList extends React.Component {
   }
 
   handleEdit (e) {
-    this.props.dispatch(editBet(e.target.value))
+    this.setState({
+      edit: !this.state.edit
+    })
+    this.props.dispatch(editBet(e.target.value, this.state))
   }
 
   render () {
