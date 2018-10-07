@@ -25,4 +25,17 @@ router.delete('/:id', (req, res) => {
     })
 })
 
+// POST ROUTES (add new bet)
+router.post('/addbet', (req, res) => {
+  const bet = req.body
+  db.addBet(bet)
+    .then(() => {
+      res.sendStatus(200)
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' +
+      err.message)
+    })
+})
+
 module.exports = router
