@@ -51,10 +51,8 @@ class Bets extends React.Component {
               <th scope="col">Edit</th>
             </tr>
           </thead>
-          <tbody>
-            {this.props.rawBets && this.props.rawBets.map(list =>
-              <BetsList key={list.id} list={list} percentColour={this.percentColour}/>)}
-          </tbody>
+          {this.props.rawBets && this.props.rawBets.map(list =>
+            <BetsList key={list.id} list={list} percentColour={this.percentColour}/>)}
         </table>
 
       </div>

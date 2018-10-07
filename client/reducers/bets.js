@@ -1,8 +1,8 @@
 import {
   GET_RAWBETS_PENDING,
   GET_RAWBETS,
-  GET_RAWBETS_ERROR,
-  GET_EDIT_STATUS}
+  GET_RAWBETS_ERROR
+}
   from '../actions/'
 
 const defaultState = {
@@ -42,9 +42,6 @@ export default function (state = defaultState, {error, rawBets, type}) {
       //   error,
       //   pending: false
       // }
-
-    case GET_EDIT_STATUS:
-      return Object.assign({}, state, {error, pending: false, editStatus: false})
 
     default:
       return state
