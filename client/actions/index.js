@@ -38,7 +38,7 @@ export function deleteBet (id) {
   return (dispatch) => {
     dispatch(getRawBetsPendng())
     return request
-      .delete(`/api/v1/bets/delete/${id}`)
+      .delete(`/api/v1/bets/${id}`)
       .then(res => {
         dispatch(getRawBetsList(res.body.result))
         dispatch(getBets())
