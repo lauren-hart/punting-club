@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {addBet} from '../actions'
 
 export class Addbet extends React.Component {
   constructor (props) {
@@ -14,7 +15,22 @@ export class Addbet extends React.Component {
       percentage: '',
       submitted: false
     }
+    this.handleChange = this.handleChange.bind(this)
   }
+
+  handleChange (e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  handleClick () {
+    this.props.dispatch(addBet(this.state))
+    this.setState({
+      submitted: !this.state.submitted
+    })
+  }
+
   render () {
     return (
       <div>
@@ -26,6 +42,7 @@ export class Addbet extends React.Component {
         <input className="form-control" name="amountBet" input={this.state.amountBet} placeholder="Amount Bet" onChange={this.handleChange}></input>
         <input className="form-control" name="amountWon" input={this.state.amountWon} placeholder="Amount Won" onChange={this.handleChange}></input>
         <input className="form-control" name="percentage" input={this.state.percentage} placeholder="Percentage" onChange={this.handleChange}></input>
+        <button onClick={this.handleClick}>Add Bet</button>
       </div>
     )
   }
