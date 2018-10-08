@@ -6,11 +6,11 @@ import Footer from './Footer'
 import './main.css'
 
 const Home = () => (
-  <div className="bg-home">
+  <div>
+    <div className="bg-grass"></div>
     <Header />
     {/* <Summary /> */}
     <Footer />
-  </div>
-)
+  </div>)
 
 export default Home

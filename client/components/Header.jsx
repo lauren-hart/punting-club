@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const Header = () => (
-  <div className="height">
+  <div>
     <h1 className="header">Raro Punt Club</h1>
     <div className="nav">
       <Link to="/"><button>Home</button></Link>

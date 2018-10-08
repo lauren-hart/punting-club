@@ -21,9 +21,30 @@
       color: black;
     }
 
-  .bg-home {
+  .bg-grass {
     background-image: url("./images/grass.jpg");
+    background-color: grey;
+    background-position: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(0.5px) brightness(70%);
+    min-height: 100vh;
     height: 100%;
-    color:white
+    width: 100vw;
+    display:flex;
+    align-items: center;
   }
 
+.header {
+  padding: 2%;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+}

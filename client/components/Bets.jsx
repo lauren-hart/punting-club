@@ -34,10 +34,10 @@ class Bets extends React.Component {
   render () {
     return (
       <div>
-        <div className="bg-home">
+        <div className="bg-header">
           <Link to='/'><button>Home</button></Link>
           <Link to='/addbet'><button>Add Bet</button></Link>
-          <h1>Bets</h1>
+          <h1 className="header">Bets</h1>
         </div>
         <table className="table">
           <thead>
