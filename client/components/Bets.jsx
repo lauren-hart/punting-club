@@ -37,8 +37,9 @@ class Bets extends React.Component {
         <div className="bg-header">
           <h1 className="header">Bets</h1>
           <div className="nav">
-            <Link to='/'><button>Home</button></Link>
-            <Link to='/addbet'><button>Add Bet</button></Link>
+            <Link to="/"><button>Home</button></Link>
+            <Link to="/bets"><button>Bets</button></Link>
+            <Link to="/members"><button>Members</button></Link>
           </div>
         </div>
         <table className="table">

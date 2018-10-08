@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import Header from './Header'
 import Footer from './Footer'
+import {Link} from 'react-router-dom'
 
 class Members extends React.Component {
   constructor (props) {
@@ -14,7 +14,14 @@ class Members extends React.Component {
     return (
       <div>
         <div className="bg-grass"></div>
-        <Header />
+        <div className="bg-header">
+          <h1 className="header">Bets</h1>
+          <div className="nav">
+            <Link to="/"><button>Home</button></Link>
+            <Link to="/bets"><button>Bets</button></Link>
+            <Link to="/members"><button>Members</button></Link>
+          </div>
+        </div>
         <h3 className="header">Members</h3>
         <Footer />
       </div>
