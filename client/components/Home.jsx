@@ -2,15 +2,51 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import Summary from './Summary'
+import {connect} from 'react-redux'
+import {getBets} from '../actions'
 
-import './main.css'
+class Home extends React.Component {
+  componentDidMount () {
+    // triggering getBets action creator
+    this.props.dispatch(getBets())
+  }
 
-const Home = () => (
-  <div>
-    <div className="bg-grass"></div>
-    <Header />
-    <Summary />
-    <Footer />
-  </div>)
+  // Change the colour of percentage won based on percentage
+  percentColour (betPercentage) {
+    const red = {background: '#C34242', color: 'white'}
+    const yellow = {background: '#E9D700', color: 'white'}
+    const green = {background: '#1F7838', color: 'white'}
+    const purple = {background: '#BE29EC', color: 'white'}
 
-export default Home
+    if (betPercentage < 50) {
+      return red
+    } else if (betPercentage < 100) {
+      return yellow
+    } else if (betPercentage < 200) {
+      return green
+    } else if (betPercentage > 200) {
+      return purple
+    } else {
+      return red
+    }
+  }
+  render () {
+    return (
+      <div>
+        <div className="bg-grass"></div>
+        <Header />
+        <Summary list={this.props.rawBets && this.props.rawBets.map(list => list)}
+          percentColour={this.percentColour}/>
+        <Footer />
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    rawBets: state.bets.rawBets
+  }
+}
+
+export default connect(mapStateToProps)(Home)

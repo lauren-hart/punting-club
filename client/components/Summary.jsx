@@ -9,11 +9,6 @@ class Summary extends React.Component {
     this.totalBetsByCouple = this.totalBetsByCouple.bind(this)
   }
 
-  componentDidMount () {
-    // triggering getBets action creator
-    this.props.dispatch(getBets())
-  }
-
   addTotalBets (bets) {
     return bets && bets.reduce((a, b) => a + b, 0)
   }
