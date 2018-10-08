@@ -24,16 +24,6 @@
   .bg-home {
     background-image: url("./images/grass.jpg");
     height: 100%;
+    color:white
   }
 
-  .header {
-    color: white
-  }
-
-  body {
-    height: 100%
-  }
-
-  .height {
-    height: 100%
-  }
