@@ -13,17 +13,27 @@
       width: 25%
     }
 
-    .home-background {
-    background-image: url("../../client/images/grass.jpg");
-    background-repeat: no-repeat, repeat;
-}
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: black;
+    }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
-}
+  .bg-home {
+    background-image: url("./images/grass.jpg");
+    height: 100%;
+  }
+
+  .header {
+    color: white
+  }
+
+  body {
+    height: 100%
+  }
+
+  .height {
+    height: 100%
+  }
