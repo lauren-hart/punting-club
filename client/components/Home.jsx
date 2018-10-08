@@ -7,6 +7,8 @@ const Home = () => (
   <div>
     <Header />
     {/* <Summary /> */}
+    <h1>hello</h1>
+    <p>1</p>
     <Footer />
   </div>
 )
