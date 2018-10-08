@@ -33,6 +33,17 @@ class Summary extends React.Component {
   }
 
   render () {
+    const couplesPercents = {
+      'Bielby/Hart': this.percentage('Bielby/Hart'),
+      'Scaglia/Scaglia': this.percentage('Scaglia/Scaglia'),
+      'Burningham/Sim': this.percentage('Burningham/Sim')
+    }
+    const sortCouplesPercent = Object.keys(couplesPercents).sort((a, b) => couplesPercents[b] - couplesPercents[a])
+
+    const first = sortCouplesPercent[0]
+    const second = sortCouplesPercent[1]
+    const third = sortCouplesPercent[2]
+
     return (
       <div>
         <h3 className="header leaderboard-h3">Leaderboard</h3>
@@ -48,42 +59,42 @@ class Summary extends React.Component {
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td>Bielby/Hart</td>
+              <td>1</td>
+              <td>{first}</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountBet('Bielby/Hart')))}
+                this.addTotalBets(this.totalAmountBet(first)))}
               </td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountWon('Bielby/Hart'))
+                this.addTotalBets(this.totalAmountWon(first))
               )}</td>
-              <td style={this.props.percentColour(this.percentage('Bielby/Hart'))}>
-                {this.percentage('Bielby/Hart')}%
+              <td style={this.props.percentColour(this.percentage(first))}>
+                {this.percentage(first)}%
               </td>
             </tr>
             <tr>
-              <td></td>
-              <td>Scaglia/Scaglia</td>
+              <td>2</td>
+              <td>{second}</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountBet('Scaglia/Scaglia')))}
+                this.addTotalBets(this.totalAmountBet(second)))}
               </td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountWon('Scaglia/Scaglia'))
+                this.addTotalBets(this.totalAmountWon(second))
               )}</td>
-              <td style={this.props.percentColour(this.percentage('Scaglia/Scaglia'))}>
-                {this.percentage('Scaglia/Scaglia')}%
+              <td style={this.props.percentColour(this.percentage(second))}>
+                {this.percentage(second)}%
               </td>
             </tr>
             <tr>
-              <td></td>
-              <td>Burningham/Sim</td>
+              <td>3</td>
+              <td>{third}</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountBet('Burningham/Sim')))}
+                this.addTotalBets(this.totalAmountBet(third)))}
               </td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountWon('Burningham/Sim'))
+                this.addTotalBets(this.totalAmountWon(third))
               )}</td>
-              <td style={this.props.percentColour(this.percentage('Burningham/Sim'))}>
-                {this.percentage('Burningham/Sim')}%
+              <td style={this.props.percentColour(this.percentage(third))}>
+                {this.percentage(third)}%
               </td>
             </tr>
           </tbody>
