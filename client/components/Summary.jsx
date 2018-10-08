@@ -39,6 +39,7 @@ class Summary extends React.Component {
         <table className="table leaderboard">
           <thead>
             <tr>
+              <th scope="col">Position</th>
               <th scope="col">Couple</th>
               <th scope="col">$ Bet</th>
               <th scope="col">$ Won</th>
@@ -47,6 +48,7 @@ class Summary extends React.Component {
           </thead>
           <tbody>
             <tr>
+              <td></td>
               <td>Bielby/Hart</td>
               <td>{accounting.formatMoney(
                 this.addTotalBets(this.totalAmountBet('Bielby/Hart')))}
@@ -59,6 +61,7 @@ class Summary extends React.Component {
               </td>
             </tr>
             <tr>
+              <td></td>
               <td>Scaglia/Scaglia</td>
               <td>{accounting.formatMoney(
                 this.addTotalBets(this.totalAmountBet('Scaglia/Scaglia')))}
@@ -71,6 +74,7 @@ class Summary extends React.Component {
               </td>
             </tr>
             <tr>
+              <td></td>
               <td>Burningham/Sim</td>
               <td>{accounting.formatMoney(
                 this.addTotalBets(this.totalAmountBet('Burningham/Sim')))}
