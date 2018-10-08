@@ -6,6 +6,7 @@ class Summary extends React.Component {
   constructor (props) {
     super(props)
     this.addTotalBets = this.addTotalBets.bind(this)
+    this.totalBetsByCouple = this.totalBetsByCouple.bind(this)
   }
 
   componentDidMount () {
@@ -14,16 +15,21 @@ class Summary extends React.Component {
   }
 
   addTotalBets (bets) {
-    bets.str
+    return bets && bets.reduce((a, b) => a + b, 0)
+  }
+
+  totalBetsByCouple (couple) {
+    return this.props.rawBets && this.props.rawBets.map(item => {
+      return item.couple === couple ? item.amountBet++ : 0
+    })
   }
 
   render () {
-    // You need a function to sum up bets by couple
-    // filter by couple's name?
+    const bh = this.addTotalBets(this.totalBetsByCouple('Bielby/Hart'))
+    const ss = this.addTotalBets(this.totalBetsByCouple('Scaglia/Scaglia'))
+    const bs = this.addTotalBets(this.totalBetsByCouple('Burningham/Sim'))
 
-    const bielbyHart = this.props.rawBets && this.props.rawBets.map(list => {
-      return list.couple === 'Bielby/Hart' ? list.amountBet : 0
-    })
+    console.log(bh, ss, bs)
 
     return (
       <div>
