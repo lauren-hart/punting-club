@@ -6,14 +6,14 @@ class Summary extends React.Component {
   constructor (props) {
     super(props)
     this.addTotalBets = this.addTotalBets.bind(this)
-    this.totalBetsByCouple = this.totalBetsByCouple.bind(this)
+    this.totalAmountBet = this.totalAmountBet.bind(this)
   }
 
   addTotalBets (bets) {
     return bets && bets.reduce((a, b) => a + b, 0)
   }
 
-  totalBetsByCouple (couple) {
+  totalAmountBet (couple) {
     return this.props.rawBets && this.props.rawBets.map(item => {
       return item.couple === couple ? item.amountBet++ : 0
     })
@@ -36,18 +36,18 @@ class Summary extends React.Component {
             <tr>
               <td>Bielby/Hart</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalBetsByCouple('Bielby/Hart'))
+                this.addTotalBets(this.totalAmountBet('Bielby/Hart'))
               )}</td>
             </tr>
             <tr>
               <td>Scaglia's</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalBetsByCouple('Scaglia/Scaglia')))}</td>
+                this.addTotalBets(this.totalAmountBet('Scaglia/Scaglia')))}</td>
             </tr>
             <tr>
               <td>Burningham/Sim</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalBetsByCouple('Burningham/Sim'))
+                this.addTotalBets(this.totalAmountBet('Burningham/Sim'))
               )}</td>
             </tr>
           </tbody>
