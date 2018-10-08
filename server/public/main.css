@@ -1,5 +1,5 @@
 * { 
-  outline: 1px solid #947676 !important; 
+  outline: 1px transparent #947676 !important; 
   } 
   
    * { 
@@ -43,8 +43,30 @@
     align-items: center;
   }
 
+  .bg-header {
+    background-image: url("./images/grass.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+
 .header {
+  padding: 2% 2% 0 2%;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.nav {
+  font-family: 'Roboto Mono', monospace;
+  padding: 1% 2% 1% 2%
+}
+
+footer {
   padding: 2%;
   color: white;
   font-family: 'Roboto Mono', monospace;
+}
+
+.table {
+  font-size: 0.8em;
 }

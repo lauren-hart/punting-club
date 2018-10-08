@@ -13,10 +13,10 @@ class Bets extends React.Component {
 
   // Change the colour of percentage won based on percentage
   percentColour (betPercentage) {
-    const red = {background: '#EE3239', color: 'white'}
-    const yellow = {background: '#FEC748', color: 'white'}
-    const green = {background: '#499360', color: 'white'}
-    const purple = {background: '#632A7E', color: 'white'}
+    const red = {background: '#C34242', color: 'white'}
+    const yellow = {background: '#E9D700', color: 'white'}
+    const green = {background: '#1F7838', color: 'white'}
+    const purple = {background: '#BE29EC', color: 'white'}
 
     if (betPercentage < 50) {
       return red
@@ -35,9 +35,11 @@ class Bets extends React.Component {
     return (
       <div>
         <div className="bg-header">
-          <Link to='/'><button>Home</button></Link>
-          <Link to='/addbet'><button>Add Bet</button></Link>
           <h1 className="header">Bets</h1>
+          <div className="nav">
+            <Link to='/'><button>Home</button></Link>
+            <Link to='/addbet'><button>Add Bet</button></Link>
+          </div>
         </div>
         <table className="table">
           <thead>
