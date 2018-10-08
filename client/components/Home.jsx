@@ -4,11 +4,9 @@ import Header from './Header'
 import Footer from './Footer'
 
 const Home = () => (
-  <div>
+  <div className="home-background">
     <Header />
     {/* <Summary /> */}
-    <h1>hello</h1>
-    <p>1</p>
     <Footer />
   </div>
 )
