@@ -7,6 +7,7 @@ class Summary extends React.Component {
     super(props)
     this.addTotalBets = this.addTotalBets.bind(this)
     this.totalAmountBet = this.totalAmountBet.bind(this)
+    this.totalAmountWon = this.totalAmountWon.bind(this)
   }
 
   addTotalBets (bets) {
@@ -16,6 +17,12 @@ class Summary extends React.Component {
   totalAmountBet (couple) {
     return this.props.rawBets && this.props.rawBets.map(item => {
       return item.couple === couple ? item.amountBet++ : 0
+    })
+  }
+
+  totalAmountWon (couple) {
+    return this.props.rawBets && this.props.rawBets.map(item => {
+      return item.couple === couple ? (isNaN(item.amountWon) ? Number(0) : (item.amountWon)++) : 0
     })
   }
 
@@ -38,16 +45,25 @@ class Summary extends React.Component {
               <td>{accounting.formatMoney(
                 this.addTotalBets(this.totalAmountBet('Bielby/Hart'))
               )}</td>
+              <td>{accounting.formatMoney(
+                this.addTotalBets(this.totalAmountWon('Bielby/Hart'))
+              )}</td>
             </tr>
             <tr>
               <td>Scaglia's</td>
               <td>{accounting.formatMoney(
                 this.addTotalBets(this.totalAmountBet('Scaglia/Scaglia')))}</td>
+              <td>{accounting.formatMoney(
+                this.addTotalBets(this.totalAmountWon('Bielby/Hart'))
+              )}</td>
             </tr>
             <tr>
               <td>Burningham/Sim</td>
               <td>{accounting.formatMoney(
                 this.addTotalBets(this.totalAmountBet('Burningham/Sim'))
+              )}</td>
+              <td>{accounting.formatMoney(
+                this.addTotalBets(this.totalAmountWon('Bielby/Hart'))
               )}</td>
             </tr>
           </tbody>
