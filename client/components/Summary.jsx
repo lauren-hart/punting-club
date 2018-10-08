@@ -1,6 +1,6 @@
 import React from 'react'
-import {getBets} from '../actions'
 import {connect} from 'react-redux'
+import {accounting} from 'accounting'
 
 class Summary extends React.Component {
   constructor (props) {
@@ -24,8 +24,6 @@ class Summary extends React.Component {
     const ss = this.addTotalBets(this.totalBetsByCouple('Scaglia/Scaglia'))
     const bs = this.addTotalBets(this.totalBetsByCouple('Burningham/Sim'))
 
-    console.log(bh, ss, bs)
-
     return (
       <div>
         <h3 className="header leaderboard-h3">Leaderboard</h3>
@@ -40,13 +38,18 @@ class Summary extends React.Component {
           </thead>
           <tbody>
             <tr>
-              {/* <td>{this.props.rawBets && this.props.rawBets.map(list => {
-                return list.couple
-              })}</td> */}
+              <td>Bielby/Hart</td>
+              <td>{accounting.formatMoney(bh)}</td>
+            </tr>
+            <tr>
+              <td>Scaglia's</td>
+              <td>{accounting.formatMoney(ss)}</td>
+            </tr>
+            <tr>
+              <td>Burningham/Sim</td>
+              <td>{accounting.formatMoney(bs)}</td>
             </tr>
           </tbody>
-          {/* {this.props.rawBets && this.props.rawBets.map(list =>
-            <BetsList key={list.id} list={list} percentColour={this.percentColour}/>)} */}
         </table>
 
       </div>

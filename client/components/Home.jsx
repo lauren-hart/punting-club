@@ -35,7 +35,7 @@ class Home extends React.Component {
       <div>
         <div className="bg-grass"></div>
         <Header />
-        <Summary list={this.props.rawBets && this.props.rawBets.map(list => list)}
+        <Summary
           percentColour={this.percentColour}/>
         <Footer />
       </div>
