@@ -20,10 +20,6 @@ class Summary extends React.Component {
   }
 
   render () {
-    const bh = this.addTotalBets(this.totalBetsByCouple('Bielby/Hart'))
-    const ss = this.addTotalBets(this.totalBetsByCouple('Scaglia/Scaglia'))
-    const bs = this.addTotalBets(this.totalBetsByCouple('Burningham/Sim'))
-
     return (
       <div>
         <h3 className="header leaderboard-h3">Leaderboard</h3>
@@ -39,15 +35,20 @@ class Summary extends React.Component {
           <tbody>
             <tr>
               <td>Bielby/Hart</td>
-              <td>{accounting.formatMoney(bh)}</td>
+              <td>{accounting.formatMoney(
+                this.addTotalBets(this.totalBetsByCouple('Bielby/Hart'))
+              )}</td>
             </tr>
             <tr>
               <td>Scaglia's</td>
-              <td>{accounting.formatMoney(ss)}</td>
+              <td>{accounting.formatMoney(
+                this.addTotalBets(this.totalBetsByCouple('Scaglia/Scaglia')))}</td>
             </tr>
             <tr>
               <td>Burningham/Sim</td>
-              <td>{accounting.formatMoney(bs)}</td>
+              <td>{accounting.formatMoney(
+                this.addTotalBets(this.totalBetsByCouple('Burningham/Sim'))
+              )}</td>
             </tr>
           </tbody>
         </table>
