@@ -8,6 +8,7 @@ class Summary extends React.Component {
     this.addTotalBets = this.addTotalBets.bind(this)
     this.totalAmountBet = this.totalAmountBet.bind(this)
     this.totalAmountWon = this.totalAmountWon.bind(this)
+    this.percentage = this.percentage.bind(this)
   }
 
   addTotalBets (bets) {
@@ -24,6 +25,11 @@ class Summary extends React.Component {
     return this.props.rawBets && this.props.rawBets.map(item => {
       return item.couple === couple ? (isNaN(item.amountWon) ? Number(0) : (item.amountWon)++) : 0
     })
+  }
+
+  percentage (couple) {
+    return ((this.addTotalBets(this.totalAmountWon(couple)) /
+    this.addTotalBets(this.totalAmountBet(couple))) * 100).toFixed(1)
   }
 
   render () {
@@ -43,28 +49,38 @@ class Summary extends React.Component {
             <tr>
               <td>Bielby/Hart</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountBet('Bielby/Hart'))
-              )}</td>
+                this.addTotalBets(this.totalAmountBet('Bielby/Hart')))}
+              </td>
               <td>{accounting.formatMoney(
                 this.addTotalBets(this.totalAmountWon('Bielby/Hart'))
               )}</td>
+              <td style={this.props.percentColour(this.percentage('Bielby/Hart'))}>
+                {this.percentage('Bielby/Hart')}%
+              </td>
             </tr>
             <tr>
-              <td>Scaglia's</td>
+              <td>Scaglia/Scaglia</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountBet('Scaglia/Scaglia')))}</td>
+                this.addTotalBets(this.totalAmountBet('Scaglia/Scaglia')))}
+              </td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountWon('Bielby/Hart'))
+                this.addTotalBets(this.totalAmountWon('Scaglia/Scaglia'))
               )}</td>
+              <td style={this.props.percentColour(this.percentage('Scaglia/Scaglia'))}>
+                {this.percentage('Scaglia/Scaglia')}%
+              </td>
             </tr>
             <tr>
               <td>Burningham/Sim</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountBet('Burningham/Sim'))
-              )}</td>
+                this.addTotalBets(this.totalAmountBet('Burningham/Sim')))}
+              </td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountWon('Bielby/Hart'))
+                this.addTotalBets(this.totalAmountWon('Burningham/Sim'))
               )}</td>
+              <td style={this.props.percentColour(this.percentage('Burningham/Sim'))}>
+                {this.percentage('Burningham/Sim')}%
+              </td>
             </tr>
           </tbody>
         </table>
