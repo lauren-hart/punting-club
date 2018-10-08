@@ -62,39 +62,39 @@ class Summary extends React.Component {
               <td>1</td>
               <td>{first}</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountBet(first)))}
+                this.addTotalBets(this.totalAmountBet('Scaglia/Scaglia')))}
               </td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountWon(first))
+                this.addTotalBets(this.totalAmountWon('Scaglia/Scaglia'))
               )}</td>
-              <td style={this.props.percentColour(this.percentage(first))}>
-                {this.percentage(first)}%
+              <td style={this.props.percentColour(this.percentage('Scaglia/Scaglia'))}>
+                {this.percentage('Scaglia/Scaglia')}%
               </td>
             </tr>
             <tr>
               <td>2</td>
               <td>{second}</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountBet(second)))}
+                this.addTotalBets(this.totalAmountBet('Burningham/Sim')))}
               </td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountWon(second))
+                this.addTotalBets(this.totalAmountWon('Burningham/Sim'))
               )}</td>
-              <td style={this.props.percentColour(this.percentage(second))}>
-                {this.percentage(second)}%
+              <td style={this.props.percentColour(this.percentage('Burningham/Sim'))}>
+                {this.percentage('Burningham/Sim')}%
               </td>
             </tr>
             <tr>
               <td>3</td>
               <td>{third}</td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountBet(third)))}
+                this.addTotalBets(this.totalAmountBet('Bielby/Hart')))}
               </td>
               <td>{accounting.formatMoney(
-                this.addTotalBets(this.totalAmountWon(third))
+                this.addTotalBets(this.totalAmountWon('Bielby/Hart'))
               )}</td>
-              <td style={this.props.percentColour(this.percentage(third))}>
-                {this.percentage(third)}%
+              <td style={this.props.percentColour(this.percentage('Bielby/Hart'))}>
+                {this.percentage('Bielby/Hart')}%
               </td>
             </tr>
           </tbody>
