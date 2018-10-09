@@ -14,13 +14,11 @@ class Members extends React.Component {
     return (
       <div>
         <div className="bg-grass"></div>
-        <div className="bg-header">
-          <h1 className="header">Bets</h1>
-          <div className="nav">
-            <Link to="/"><button>Home</button></Link>
-            <Link to="/bets"><button>Bets</button></Link>
-            <Link to="/members"><button>Members</button></Link>
-          </div>
+        <h1 className="header">Members</h1>
+        <div className="nav">
+          <Link to="/"><button>Home</button></Link>
+          <Link to="/bets"><button>Bets</button></Link>
+          <Link to="/members"><button>Members</button></Link>
         </div>
         <h3 className="header">Members</h3>
         <Footer />

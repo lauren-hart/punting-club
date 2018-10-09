@@ -34,15 +34,14 @@ class Bets extends React.Component {
   render () {
     return (
       <div>
-        <div className="bg-header">
-          <h1 className="header">Bets</h1>
-          <div className="nav">
-            <Link to="/"><button>Home</button></Link>
-            <Link to="/bets"><button>Bets</button></Link>
-            <Link to="/members"><button>Members</button></Link>
-          </div>
+        <div className="bg-grass"></div>
+        <h1 className="header">Bets</h1>
+        <div className="nav">
+          <Link to="/"><button>Home</button></Link>
+          <Link to="/bets"><button>Bets</button></Link>
+          <Link to="/members"><button>Members</button></Link>
         </div>
-        <table className="table">
+        <table className="table bets">
           <thead>
             <tr>
               <th scope="col">Couple</th>
