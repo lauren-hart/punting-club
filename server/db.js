@@ -4,7 +4,9 @@ const connection = require('knex')(config)
 module.exports = {
   getBets,
   deleteBet,
-  addBet
+  addBet,
+  getMembers,
+  deleteMember
 }
 
 // GET bets from database
@@ -34,4 +36,19 @@ function addBet (bet, testDb) {
       amount_bet: bet.amountBet,
       amount_won: bet.amountWon
     })
+}
+
+// GET members from database
+function getMembers (testDb) {
+  const db = testDb || connection
+  return db('members')
+    .select()
+}
+
+// DELETE member from database by id
+function deleteMember (id, testDb) {
+  const db = testDb || connection
+  return db('bets')
+    .where('id', id)
+    .del()
 }
