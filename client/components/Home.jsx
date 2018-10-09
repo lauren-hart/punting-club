@@ -3,7 +3,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Leaderboard from './Leaderboard'
 import {connect} from 'react-redux'
-import {getBets} from '../actions/members'
+import {getBets} from '../actions/bets'
 
 class Home extends React.Component {
   componentDidMount () {

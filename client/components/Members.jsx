@@ -10,10 +10,10 @@ class Members extends React.Component {
     }
   }
 
-  componentDidMount () {
-    // triggering getBets action creator
-    this.props.dispatch(getMembers())
-  }
+  // componentDidMount () {
+  //   // triggering getBets action creator
+  //   this.props.dispatch(getMembers())
+  // }
 
   render () {
     return (

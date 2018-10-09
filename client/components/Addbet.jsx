@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {addBet} from '../actions'
+import {addBet} from '../actions/bets'
 import {Redirect} from 'react-router-dom'
 
 export class Addbet extends React.Component {
