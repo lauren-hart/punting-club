@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import Footer from './Footer'
 import {Link} from 'react-router-dom'
+import {getMembers} from '../actions/members'
 
 class Members extends React.Component {
   constructor (props) {
@@ -10,10 +11,10 @@ class Members extends React.Component {
     }
   }
 
-  // componentDidMount () {
-  //   // triggering getBets action creator
-  //   this.props.dispatch(getMembers())
-  // }
+  componentDidMount () {
+    // triggering getBets action creator
+    this.props.dispatch(getMembers())
+  }
 
   render () {
     return (
