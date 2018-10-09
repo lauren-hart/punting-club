@@ -1,20 +1,20 @@
 import {
-  GET_RAWBETS_PENDING,
-  GET_RAWBETS,
-  GET_RAWBETS_ERROR
+  GET_MEMBERS_PENDING,
+  GET_MEMBERS,
+  GET_MEMBERS_ERROR
 }
-  from '../actions/bets'
+  from '../actions/members'
 
 const defaultState = {
-  bets: null,
+  members: null,
   error: null,
   pending: false,
   editStatus: false
 }
 
-export default function (state = defaultState, {error, rawBets, type}) {
+export default function (state = defaultState, {error, members, type}) {
   switch (type) {
-    case GET_RAWBETS_PENDING:
+    case GET_MEMBERS_PENDING:
       return Object.assign({}, state, {error: null, pending: true})
 
       // return {
@@ -23,22 +23,22 @@ export default function (state = defaultState, {error, rawBets, type}) {
       //   pending: true
       // }
 
-    case GET_RAWBETS:
-      return Object.assign({}, state, {error: null, pending: false, rawBets})
+    case GET_MEMBERS:
+      return Object.assign({}, state, {error: null, pending: false, members})
 
       // return {
       //   ...state,
-      //   rawBets,
+      //   members,
       //   error: null,
       //   pending: false
       // }
 
-    case GET_RAWBETS_ERROR:
-      return Object.assign({}, state, {error, pending: false, rawBets: null})
+    case GET_MEMBERS_ERROR:
+      return Object.assign({}, state, {error, pending: false, members: null})
 
       // return {
       //   ...state,
-      //   rawBets: null,
+      //   members: null,
       //   error,
       //   pending: false
       // }
