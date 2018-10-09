@@ -9,17 +9,10 @@ class Timetable extends React.Component {
   render () {
     return (
       <div>
-        <h3>Timetable</h3>
-        <table className="table members">
-          <thead>
-            <tr>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <td></td>
-          </tbody>
-        </table>
+        <h3>Next to bet</h3>
+        <div className="timetable">
+          <h3>Couple...</h3>
+        </div>
       </div>
     )
   }

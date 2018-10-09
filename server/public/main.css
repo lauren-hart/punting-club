@@ -102,3 +102,12 @@ body {
   color:black;
   font-size: 1.1em
 }
+
+.timetable {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #EFEEEE;
+  color:black;
+  font-size: 1.1em
+}
