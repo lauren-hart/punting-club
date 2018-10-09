@@ -4,6 +4,7 @@ import Footer from './Footer'
 import Leaderboard from './Leaderboard'
 import {connect} from 'react-redux'
 import {getBets} from '../actions/bets'
+import Timetable from './Timetable'
 
 class Home extends React.Component {
   componentDidMount () {
@@ -35,6 +36,7 @@ class Home extends React.Component {
       <div>
         <div className="bg-grass"></div>
         <Header />
+        <Timetable />
         <Leaderboard
           percentColour={this.percentColour}/>
         <Footer />

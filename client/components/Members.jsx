@@ -17,12 +17,6 @@ class Members extends React.Component {
   }
 
   render () {
-    const test = this.props.members && this.props.members.map(item => {
-      if (item.couple === 'Bielby/Hart') {
-        return item.person[0]
-      }
-    })
-
     return (
       <div>
         <div className="bg-grass"></div>
@@ -33,9 +27,10 @@ class Members extends React.Component {
           <Link to="/members"><button>Members</button></Link>
         </div>
         <table className="table members">
-          <thead>
+          <thead className="thead-dark">
             <tr>
               <th>Bielby/Hart</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -49,18 +44,13 @@ class Members extends React.Component {
                 return <td key={item.id}>{item.email}</td>
               }
             })}</tr>
-            <tr>{this.props.members && this.props.members.map(item => {
-              if (item.couple === 'Bielby/Hart') {
-                // return <td key={item.id}><img src={item.imagecouple} /></td>
-                return <td key={item.id}>{item.imagecouple}</td>
-              }
-            })}</tr>
           </tbody>
         </table>
         <table className="table members">
-          <thead>
+          <thead className="thead-dark">
             <tr>
               <th>Scaglia/Scaglia</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -74,12 +64,14 @@ class Members extends React.Component {
                 return <td key={item.id}>{item.email}</td>
               }
             })}</tr>
+            <tr></tr>
           </tbody>
         </table>
         <table className="table members">
-          <thead>
+          <thead className="thead-dark">
             <tr>
               <th>Burningham/Sim</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
