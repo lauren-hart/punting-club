@@ -1,5 +1,5 @@
 import React from 'react'
-import {deleteBet} from '../actions/index'
+import {deleteBet} from '../actions/members'
 import {connect} from 'react-redux'
 import {accounting} from 'accounting'
 // import {Redirect} from 'react-router-dom'

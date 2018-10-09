@@ -1,6 +1,6 @@
 import React from 'react'
 // import {Redirect} from 'react-router-dom'
-import {getBets} from '../actions'
+import {getBets} from '../actions/members'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import BetsList from './BetsList'
