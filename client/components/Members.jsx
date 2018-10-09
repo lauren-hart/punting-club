@@ -41,11 +41,61 @@ class Members extends React.Component {
           <tbody>
             <tr>{this.props.members && this.props.members.map(item => {
               if (item.couple === 'Bielby/Hart') {
-                return <td>{item.person}</td>
+                return <td key={item.id}>{item.person}</td>
+              }
+            })}</tr>
+            <tr>{this.props.members && this.props.members.map(item => {
+              if (item.couple === 'Bielby/Hart') {
+                return <td key={item.id}>{item.email}</td>
+              }
+            })}</tr>
+            <tr>{this.props.members && this.props.members.map(item => {
+              if (item.couple === 'Bielby/Hart') {
+                // return <td key={item.id}><img src={item.imagecouple} /></td>
+                return <td key={item.id}>{item.imagecouple}</td>
               }
             })}</tr>
           </tbody>
         </table>
+        <table className="table members">
+          <thead>
+            <tr>
+              <th>Scaglia/Scaglia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>{this.props.members && this.props.members.map(item => {
+              if (item.couple === 'Scaglia/Scaglia') {
+                return <td key={item.id}>{item.person}</td>
+              }
+            })}</tr>
+            <tr>{this.props.members && this.props.members.map(item => {
+              if (item.couple === 'Scaglia/Scaglia') {
+                return <td key={item.id}>{item.email}</td>
+              }
+            })}</tr>
+          </tbody>
+        </table>
+        <table className="table members">
+          <thead>
+            <tr>
+              <th>Burningham/Sim</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>{this.props.members && this.props.members.map(item => {
+              if (item.couple === 'Burningham/Sim') {
+                return <td>{item.person}</td>
+              }
+            })}</tr>
+            <tr>{this.props.members && this.props.members.map(item => {
+              if (item.couple === 'Burningham/Sim') {
+                return <td key={item.id}>{item.email}</td>
+              }
+            })}</tr>
+          </tbody>
+        </table>
+
         <Footer />
       </div>
 
