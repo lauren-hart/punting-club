@@ -35,7 +35,7 @@
     background-size: cover !important;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: blur(0.5px) brightness(70%);
+    filter: blur(0.5px) brightness(80%);
     min-height: 100vh;
     height: 100%;
     width: 100vw;
@@ -47,7 +47,7 @@
     background-image: url("./images/grass.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    
+    filter: blur(0.5px) brightness(60%);
   }
 
 .header {
@@ -110,4 +110,26 @@ body {
   margin: 0 5%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.bg-green {
+  background-image: url("./images/green.jpg");
+  background-color: grey;
+  background-position: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(0.5px) brightness(60%);
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+  display:flex;
+  align-items: center;
 }

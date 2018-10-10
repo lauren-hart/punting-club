@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 const Header = () => (
   <div>
+    <div className="bg-green"></div>
     <h1 className="header">Raro Punt Club</h1>
     <div className="nav">
       <Link to="/"><button>Home</button></Link>
