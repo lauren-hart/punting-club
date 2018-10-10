@@ -36,9 +36,13 @@ class Home extends React.Component {
       <div>
         <div className="bg-grass"></div>
         <Header />
-        <Timetable />
-        <Leaderboard
-          percentColour={this.percentColour}/>
+        <div className="row">
+          <div className="col-md-2"><Timetable />
+          </div>
+          <div className="col-md-8"><Leaderboard
+            percentColour={this.percentColour}/>
+          </div>
+        </div>
         <Footer />
       </div>
     )
