@@ -9,6 +9,7 @@ class Timetable extends React.Component {
       weekday: ''
     }
     this.setDate = this.setDate.bind(this)
+    this.setWeekday = this.setWeekday.bind(this)
   }
 
   componentDidMount () {
@@ -17,11 +18,9 @@ class Timetable extends React.Component {
 
   setDate () {
     const today = new Date()
-    const weekday = new Date().getDay()
     const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
     this.setState({
-      date: date,
-      weekday: weekday
+      date: date
     })
   }
 
@@ -42,7 +41,7 @@ class Timetable extends React.Component {
         <div className="timetable">
           <h5>Today is...</h5>
           <h5>{this.state.date}</h5>
-          <h5>{this.state.weekday}</h5>
+          <p>{this.setWeekday()}</p>
         </div>
       </div>
     )
