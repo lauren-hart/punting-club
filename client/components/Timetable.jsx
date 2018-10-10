@@ -28,9 +28,17 @@ class Timetable extends React.Component {
     switch (new Date().getDay()) {
       case 0:
       case 6:
-        return 'Weekend'
-      default:
-        return 'Not the weekend yet!'
+        return "It's the weekend, Time to bet!"
+      case 1:
+        return "It's only Monday.."
+      case 2:
+        return '4 more days'
+      case 3:
+        return 'Hump day, 3 days to go!'
+      case 4:
+        return '2 more days'
+      case 5:
+        return 'Get ready to bet tomorrow!'
     }
   }
 
@@ -39,9 +47,7 @@ class Timetable extends React.Component {
       <div>
         <h3>Next to bet</h3>
         <div className="timetable">
-          <h5>Today is...</h5>
-          <h5>{this.state.date}</h5>
-          <p>{this.setWeekday()}</p>
+          <h5>{this.setWeekday()}</h5>
         </div>
       </div>
     )
