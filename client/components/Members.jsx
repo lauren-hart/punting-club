@@ -77,7 +77,7 @@ class Members extends React.Component {
           <tbody>
             <tr>{this.props.members && this.props.members.map(item => {
               if (item.couple === 'Burningham/Sim') {
-                return <td>{item.person}</td>
+                return <td key={item.id}>{item.person}</td>
               }
             })}</tr>
             <tr>{this.props.members && this.props.members.map(item => {

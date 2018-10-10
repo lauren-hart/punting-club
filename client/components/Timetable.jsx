@@ -4,6 +4,35 @@ import {connect} from 'react-redux'
 class Timetable extends React.Component {
   constructor (props) {
     super(props)
+    this.state = {
+      date: '',
+      weekday: ''
+    }
+    this.setDate = this.setDate.bind(this)
+  }
+
+  componentDidMount () {
+    this.setDate()
+  }
+
+  setDate () {
+    const today = new Date()
+    const weekday = new Date().getDay()
+    const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
+    this.setState({
+      date: date,
+      weekday: weekday
+    })
+  }
+
+  setWeekday () {
+    switch (new Date().getDay()) {
+      case 0:
+      case 6:
+        return 'Weekend'
+      default:
+        return 'Not the weekend yet!'
+    }
   }
 
   render () {
@@ -11,7 +40,9 @@ class Timetable extends React.Component {
       <div>
         <h3>Next to bet</h3>
         <div className="timetable">
-          <h3>Couple...</h3>
+          <h5>Today is...</h5>
+          <h5>{this.state.date}</h5>
+          <h5>{this.state.weekday}</h5>
         </div>
       </div>
     )
