@@ -9,6 +9,7 @@ class Login extends React.Component {
   render () {
     return (
       <div>
+        <input placeholder="Enter your name"></input>
       </div>
     )
   }
