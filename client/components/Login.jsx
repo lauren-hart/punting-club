@@ -9,6 +9,7 @@ class Login extends React.Component {
       submitted: false
     }
     this.handleChange = this.handleChange.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleChange (e) {
@@ -32,6 +33,7 @@ class Login extends React.Component {
           onChange={this.handleChange}
         ></input>
         <button onClick={this.handleClick}>Enter</button>
+        <div>{this.state.submitted ? <p>Hello {this.state.input}!</p> : ''}</div>
       </div>
     )
   }
