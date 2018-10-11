@@ -1,22 +1,10 @@
-# Fullstack boilerplate
+# Punting Club
 
-To get started:
+## Background:
+I was managing a spreadsheet for a social club I have with some friends. The idea of the club was to take it in turns to spend $30 per couple at the TAB. The money stayed in the account (including all losses and wins). After one year, we take whatever money we have (or don't have) and use it to go on holiday. 
 
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-yarn # to install dependencies
-yarn dev # to start the dev server
-```
+Each week I was calculating how much each couple had bet and how much they had won to work out which couple was winning. The winner at the end of each year has the honour to book the holiday for everyone. 
 
-You can find the server running on [http://localhost:3000](http://localhost:3000).
+This project was a way for me to transfer my excel spreadsheet skills (from my prior background in accounting) and translate them into a working web application. 
 
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* a fake database module (`db.js`)
-* an API client module (`apiClient.js`)
-* configuration for Jest and Enzyme (including JSDOM)
-* configuration for server-side debugging in VS Code
-* a single client-side test (`/tests/client/App.test.js`)
+I am using Node and Express on the back end and React and Redux on the front end. It is an ongoing project I am working on and a way for me to practice all the skills I have learnt with EDA. 
