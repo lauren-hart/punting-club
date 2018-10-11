@@ -10,6 +10,12 @@ class Login extends React.Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
+  handleChange (e) {
+    this.setState({
+      input: e.target.value
+    })
+  }
+
   render () {
     return (
       <div>
