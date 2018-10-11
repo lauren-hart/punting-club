@@ -7,6 +7,7 @@ class Login extends React.Component {
     this.state = {
       input: ''
     }
+    this.handleChange = this.handleChange.bind(this)
   }
 
   render () {
