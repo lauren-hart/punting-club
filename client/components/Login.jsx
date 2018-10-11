@@ -5,7 +5,8 @@ class Login extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      input: ''
+      input: '',
+      submitted: false
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -13,6 +14,12 @@ class Login extends React.Component {
   handleChange (e) {
     this.setState({
       input: e.target.value
+    })
+  }
+
+  handleClick () {
+    this.setState({
+      submitted: !this.state.submitted
     })
   }
 
