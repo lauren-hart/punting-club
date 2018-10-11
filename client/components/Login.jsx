@@ -33,7 +33,7 @@ class Login extends React.Component {
           onChange={this.handleChange}
         ></input>
         <button onClick={this.handleClick}>Enter</button>
-        <div>{this.state.submitted ? <p>Hello {this.state.input}!</p> : ''}</div>
+        <div>{this.state.submitted ? <p className="input-name">Hello {this.state.input}!</p> : <p></p>}</div>
       </div>
     )
   }
