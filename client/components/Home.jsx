@@ -5,6 +5,7 @@ import Leaderboard from './Leaderboard'
 import {connect} from 'react-redux'
 import {getBets} from '../actions/bets'
 import Timetable from './Timetable'
+import Login from './Login'
 
 class Home extends React.Component {
   componentDidMount () {
@@ -35,6 +36,7 @@ class Home extends React.Component {
     return (
       <div>
         <Header />
+        <Login />
         <Timetable />
         <Leaderboard
           percentColour={this.percentColour}/>
