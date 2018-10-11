@@ -24,6 +24,7 @@ class Login extends React.Component {
           className="input-name"
           onChange={this.handleChange}
         ></input>
+        <button onClick={this.handleClick}>Add</button>
         <p>{this.state.input}</p>
       </div>
     )
