@@ -38,14 +38,15 @@ class Home extends React.Component {
         <Header />
         <Login />
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-2">
             <Timetable />
           </div>
+          <div className="col-md-1"></div>
           <div className="col-md-6 leaderboard">
             <Leaderboard
               percentColour={this.percentColour}/>
           </div>
-          <div classNAme="col-md-2"></div>
+          <div className="col-md-3"></div>
         </div>
         <Footer />
       </div>
