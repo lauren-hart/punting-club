@@ -47,7 +47,7 @@ class Summary extends React.Component {
     return (
       <div>
         <h3 className="header leaderboard-h3">Leaderboard</h3>
-        <table className="table leaderboard">
+        <table className="table table-leaderboard">
           <thead>
             <tr>
               <th scope="col">Position</th>
