@@ -3,6 +3,7 @@ import {deleteBet} from '../actions/bets'
 import {connect} from 'react-redux'
 import {accounting} from 'accounting'
 // import {Redirect} from 'react-router-dom'
+import Editbet from './Editbet'
 
 class BetsList extends React.Component {
   constructor (props) {
@@ -11,10 +12,17 @@ class BetsList extends React.Component {
       editStatus: false
     }
     this.handleDelete = this.handleDelete.bind(this)
+    this.handleEdit = this.handleEdit.bind(this)
   }
 
   handleDelete (e) {
     this.props.dispatch(deleteBet(e.target.value))
+  }
+
+  handleEdit () {
+    this.setState({
+      editStatus: !this.state.editStatus
+    })
   }
 
   render () {
@@ -26,17 +34,19 @@ class BetsList extends React.Component {
       ? Number(0) : ((amountWon / amountBet) * 100).toFixed(0)
     return (
       <tbody>
-        <tr>
-          <td>{this.props.list.couple}</td>
-          <td>{this.props.list.person}</td>
-          <td>{this.props.list.bet}</td>
-          <td>{accounting.formatMoney(amountBet)}</td>
-          <td>{accounting.formatMoney(amountWon)}</td>
-          <td style={this.props.percentColour(percentage)}>{percentage}%</td>
-          <td>{this.props.list.date}</td>
-          <td><button value={this.props.list.id} onClick={this.handleDelete}>x</button></td>
-          <td><button value={this.props.list.id} onClick={this.handleEdit}>Edit</button></td>
-        </tr>
+        {this.state.editStatus ? <Editbet list={this.props.list}/>
+          : <tr>
+            <td>{this.props.list.couple}</td>
+            <td>{this.props.list.person}</td>
+            <td>{this.props.list.bet}</td>
+            <td>{accounting.formatMoney(amountBet)}</td>
+            <td>{accounting.formatMoney(amountWon)}</td>
+            <td style={this.props.percentColour(percentage)}>{percentage}%</td>
+            <td>{this.props.list.date}</td>
+            <td><button value={this.props.list.id} onClick={this.handleDelete}>x</button></td>
+            <td><button value={this.props.list.id} onClick={this.handleEdit}>Edit</button></td>
+          </tr>
+        }
       </tbody>
     )
   }

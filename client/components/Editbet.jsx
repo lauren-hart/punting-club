@@ -10,8 +10,17 @@ class Editbet extends React.Component {
 
   render () {
     return (
-      <div>
-      </div>
+      <tr>
+        <td><input placeholder={this.props.list.couple}></input></td>
+        <td><input></input></td>
+        <td><input></input></td>
+        <td><input></input></td>
+        <td><input></input></td>
+        <td></td>
+        <td><input></input></td>
+        <td></td>
+        <td></td>
+      </tr>
     )
   }
 }
