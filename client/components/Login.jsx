@@ -9,6 +9,7 @@ class Login extends React.Component {
       submitted: false
     }
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleClear = this.handleClear.bind(this)
   }
 
   handleSubmit (e) {
@@ -18,6 +19,13 @@ class Login extends React.Component {
         input: e.target.value
       })
     }
+  }
+
+  handleClear () {
+    this.setState({
+      submitted: false,
+      input: ''
+    })
   }
 
   render () {
