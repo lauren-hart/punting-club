@@ -6,25 +6,34 @@ class Login extends React.Component {
     super(props)
     this.state = {
       input: '',
-      submitted: false
+      isSubmitted: false,
+      submit: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleClear = this.handleClear.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   handleSubmit (e) {
-    if (e.keyCode === 13 && this.state.input === '') {
+    if (e.keyCode === 13 && this.state.submit === '') {
       this.setState({
-        submitted: !this.state.submitted,
-        input: e.target.value
+        isSubmitted: !this.state.isSubmitted,
+        submit: e.target.value
       })
     }
   }
 
   handleClear () {
     this.setState({
-      submitted: false,
+      isSubmitted: false,
+      submit: '',
       input: ''
+    })
+  }
+
+  handleChange (e) {
+    this.setState({
+      input: e.target.value
     })
   }
 
@@ -34,12 +43,13 @@ class Login extends React.Component {
         <input
           placeholder="Enter your name"
           className="input-name"
-          onChange={this.handleSubmit}
+          onChange={this.handleChange}
           onKeyUp={this.handleSubmit}
+          value={this.state.input}
         ></input>
         <button onClick={this.handleClick}>Enter</button>
         <button onClick={this.handleClear}>Clear</button>
-        <div>{this.state.submitted ? <p className="input-name">Hello {this.state.input}!</p> : <p></p>}</div>
+        <div>{this.state.isSubmitted ? <p className="input-name">Hello {this.state.input}!</p> : <p></p>}</div>
       </div>
     )
   }
