@@ -8,19 +8,24 @@ class Login extends React.Component {
       input: '',
       submitted: false
     }
-    this.handleChange = this.handleChange.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    this.handleEnter = this.handleEnter.bind(this)
   }
 
-  handleChange (e) {
+  handleEnter (e) {
+    if (e.keyCode === 13) {
+      this.setState({
+        submitted: true,
+        input: e.target.value
+      })
+    }
+  }
+
+  handleClick (e) {
     this.setState({
+      submitted: true,
       input: e.target.value
-    })
-  }
 
-  handleClick () {
-    this.setState({
-      submitted: !this.state.submitted
     })
   }
 
@@ -31,6 +36,7 @@ class Login extends React.Component {
           placeholder="Enter your name"
           className="input-name"
           onChange={this.handleChange}
+          onKeyUp={this.handleEnter}
         ></input>
         <button onClick={this.handleClick}>Enter</button>
         <div>{this.state.submitted ? <p className="input-name">Hello {this.state.input}!</p> : <p></p>}</div>
