@@ -49,7 +49,7 @@ class Login extends React.Component {
         ></input>
         <button onClick={this.handleClick}>Enter</button>
         <button onClick={this.handleClear}>Clear</button>
-        <div className="row">{this.state.isSubmitted ? <p className="input-name">Hello {this.state.input}!</p> : <p></p>}</div>
+        <p className="input-name">{this.state.isSubmitted ? 'Hello ' + this.state.input : ''}</p>
       </div>
     )
   }

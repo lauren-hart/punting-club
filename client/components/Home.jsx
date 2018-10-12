@@ -5,7 +5,6 @@ import Leaderboard from './Leaderboard'
 import {connect} from 'react-redux'
 import {getBets} from '../actions/bets'
 import Timetable from './Timetable'
-import Login from './Login'
 
 class Home extends React.Component {
   componentDidMount () {
@@ -36,7 +35,6 @@ class Home extends React.Component {
     return (
       <div className="container-fluid">
         <Header />
-        <Login />
         <div className="row">
           <div className="col-md-2">
             <Timetable />

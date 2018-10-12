@@ -1,5 +1,5 @@
 * { 
-  outline: 1px solid #947676 !important; 
+  outline: 1px transparent #947676 !important; 
   } 
   
    * { 
@@ -99,9 +99,9 @@ body {
 
 .timetable {
   color: white;
-  font-size: 1.0em;
-  border: solid 1px white;
-  margin: 1%
+  font-size: 1.2em;
+  margin-left: 6%;
+  margin-top: 20%
 }
 
 .bg-green {
@@ -133,5 +133,5 @@ body {
 }
 
 .input-name {
-  margin: 1%
+  margin-left: 1%
 }
