@@ -53,15 +53,18 @@
 .header {
   color: white;
   font-family: 'Roboto Mono', monospace;
+  margin: 1%
 }
 
 .nav {
   font-family: 'Roboto Mono', monospace;
+  margin: 1%
 }
 
 footer {
   color: white;
   font-family: 'Roboto Mono', monospace;
+  margin: 1%
 }
 
 .table {
@@ -81,11 +84,6 @@ body {
   opacity: 0.8;
 }
 
-.timetable-h3 {
-  text-decoration: underline;
-}
-
-
 .bets {
   background: white;
 }
@@ -101,9 +99,9 @@ body {
 
 .timetable {
   color: white;
-  font-size: 1.1em;
+  font-size: 1.0em;
   border: solid 1px white;
-  margin: 2%
+  margin: 1%
 }
 
 .bg-green {
@@ -132,4 +130,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center
+}
+
+.input-name {
+  margin: 1%
 }
