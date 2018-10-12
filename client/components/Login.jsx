@@ -30,6 +30,7 @@ class Login extends React.Component {
           onKeyUp={this.handleSubmit}
         ></input>
         <button onClick={this.handleClick}>Enter</button>
+        <button onClick={this.handleClear}>Clear</button>
         <div>{this.state.submitted ? <p className="input-name">Hello {this.state.input}!</p> : <p></p>}</div>
       </div>
     )
