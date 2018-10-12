@@ -34,7 +34,11 @@ class BetsList extends React.Component {
       ? Number(0) : ((amountWon / amountBet) * 100).toFixed(0)
     return (
       <tbody>
-        {this.state.editStatus ? <Editbet list={this.props.list}/>
+        {this.state.editStatus
+          ? <Editbet
+            list={this.props.list}
+            amountBet={amountBet}
+            amountWon={amountWon}/>
           : <tr>
             <td>{this.props.list.couple}</td>
             <td>{this.props.list.person}</td>
