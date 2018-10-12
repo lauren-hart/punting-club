@@ -17,13 +17,13 @@ class Summary extends React.Component {
 
   totalAmountBet (couple) {
     return this.props.rawBets && this.props.rawBets.map(item => {
-      return item.couple === couple ? item.amountBet++ : 0
+      return item.couple === couple ? Number(item.amountBet) : 0
     })
   }
 
   totalAmountWon (couple) {
     return this.props.rawBets && this.props.rawBets.map(item => {
-      return item.couple === couple ? (isNaN(item.amountWon) ? Number(0) : (item.amountWon)++) : 0
+      return item.couple === couple ? (isNaN(item.amountWon) ? Number(0) : Number(item.amountWon)) : 0
     })
   }
 
@@ -33,6 +33,15 @@ class Summary extends React.Component {
   }
 
   render () {
+    const test = this.props.rawBets && this.props.rawBets.map(item => {
+      return item.couple === 'Bielby/Hart' ? Number(item.amountBet) : 0
+    })
+    console.log(test)
+
+    const test2 = test && test.reduce((a, b) => a + b, 0)
+
+    console.log(test2)
+
     const couplesPercents = {
       'Bielby/Hart': this.percentage('Bielby/Hart'),
       'Scaglia/Scaglia': this.percentage('Scaglia/Scaglia'),
