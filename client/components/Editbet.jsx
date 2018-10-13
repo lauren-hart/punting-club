@@ -9,6 +9,10 @@ class Editbet extends React.Component {
     }
   }
 
+  handleClick () {
+    
+  }
+
   render () {
     return (
       <tr>
@@ -20,7 +24,7 @@ class Editbet extends React.Component {
         <td></td>
         <td><input placeholder={this.props.list.date}></input></td>
         <td></td>
-        <td></td>
+        <td><button onClick={this.handleClick}>Finish</button></td>
       </tr>
     )
   }

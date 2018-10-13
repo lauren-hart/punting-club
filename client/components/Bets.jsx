@@ -6,6 +6,13 @@ import {Link} from 'react-router-dom'
 import BetsList from './BetsList'
 
 class Bets extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      addBet: true
+    }
+    this.handleAdd = this.handleAdd.bind(this)
+  }
   componentDidMount () {
     // triggering getBets action creator
     this.props.dispatch(getBets())
@@ -31,6 +38,12 @@ class Bets extends React.Component {
     }
   }
 
+  handleAdd () {
+    this.setState({
+      addBet: !this.state.addBet
+    })
+  }
+
   render () {
     return (
       <div>
@@ -41,6 +54,7 @@ class Bets extends React.Component {
           <Link to="/bets"><button>Bets</button></Link>
           <Link to="/members"><button>Members</button></Link>
         </div>
+        <button onClick={this.handleAdd} className="add-bet" >Add Bet</button>
         <table className="table bets">
           <thead>
             <tr>
