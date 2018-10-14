@@ -1,18 +1,25 @@
 import React from 'react'
-import {deleteBet} from '../actions/bets'
+import {deleteBet, editBet} from '../actions/bets'
 import {connect} from 'react-redux'
 import {accounting} from 'accounting'
-// import {Redirect} from 'react-router-dom'
-import Editbet from './Editbet'
 
 class BetsList extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      editStatus: false
+      editStatus: false,
+      person: '',
+      couple: '',
+      sport: '',
+      bet: '',
+      amountBet: '',
+      amountWon: '',
+      date: '',
+      percentage: ''
     }
     this.handleDelete = this.handleDelete.bind(this)
     this.handleEdit = this.handleEdit.bind(this)
+    this.sendBet = this.sendBet.bind(this)
   }
 
   handleDelete (e) {
@@ -25,6 +32,23 @@ class BetsList extends React.Component {
     })
   }
 
+  handleChange (e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  handleClick (e) {
+    this.setState({
+      submitted: !this.state.submitted
+    })
+    this.sendBet(e.target.value)
+  }
+
+  sendBet (id) {
+    this.props.dispatch(editBet(this.state, id))
+  }
+
   render () {
     const amountBet = Number(this.props.list.amountBet).toFixed(2)
     const amountWon = isNaN(this.props.list.amountWon)
@@ -35,10 +59,17 @@ class BetsList extends React.Component {
     return (
       <tbody>
         {this.state.editStatus
-          ? <Editbet
-            list={this.props.list}
-            amountBet={amountBet}
-            amountWon={amountWon}/>
+          ? <tr>
+            <td><input placeholder={this.props.list.couple}></input></td>
+            <td><input placeholder={this.props.list.person}></input></td>
+            <td><input placeholder={this.props.list.bet}></input></td>
+            <td><input placeholder={accounting.formatMoney(this.props.amountBet)}></input></td>
+            <td><input placeholder={accounting.formatMoney(this.props.amountWon)}></input></td>
+            <td></td>
+            <td><input placeholder={this.props.list.date}></input></td>
+            <td></td>
+            <td><button value={this.props.list.id} onClick={this.handleEdit}>Finish</button></td>
+          </tr>
           : <tr>
             <td>{this.props.list.couple}</td>
             <td>{this.props.list.person}</td>
@@ -50,6 +81,7 @@ class BetsList extends React.Component {
             <td><button value={this.props.list.id} onClick={this.handleDelete}>x</button></td>
             <td><button value={this.props.list.id} onClick={this.handleEdit}>Edit</button></td>
           </tr>
+
         }
       </tbody>
     )
