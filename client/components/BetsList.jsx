@@ -63,8 +63,8 @@ class BetsList extends React.Component {
             <td><input placeholder={this.props.list.couple}></input></td>
             <td><input placeholder={this.props.list.person}></input></td>
             <td><input placeholder={this.props.list.bet}></input></td>
-            <td><input placeholder={accounting.formatMoney(this.props.amountBet)}></input></td>
-            <td><input placeholder={accounting.formatMoney(this.props.amountWon)}></input></td>
+            <td><input placeholder={accounting.formatMoney(amountBet)}></input></td>
+            <td><input placeholder={accounting.formatMoney(amountWon)}></input></td>
             <td></td>
             <td><input placeholder={this.props.list.date}></input></td>
             <td></td>
