@@ -55,27 +55,26 @@ class Bets extends React.Component {
           <Link to="/bets"><button>Bets</button></Link>
           <Link to="/members"><button>Members</button></Link>
         </div>
-        <button onClick={this.handleAdd} className="add-bet" >Add Bet</button>
+        <Link to="/addbet"><button onClick={this.handleAdd} className="add-bet" >Add Bet</button></Link>
 
-        {this.state.addBet ? <Addbet />
-          : <table className="table bets">
-            <thead>
-              <tr>
-                <th scope="col">Couple</th>
-                <th scope="col">Person</th>
-                <th scope="col">Bet</th>
-                <th scope="col">$ Bet</th>
-                <th scope="col">$ Won</th>
-                <th scope="col">%</th>
-                <th scope="col">Date</th>
-                <th scope="col">Delete</th>
-                <th scope="col">Edit</th>
-              </tr>
-            </thead>
-            {this.props.rawBets && this.props.rawBets.map(list =>
-              <BetsList key={list.id} list={list} percentColour={this.percentColour}/>)}
-          </table>
-        }
+        <table className="table bets">
+          <thead>
+            <tr>
+              <th scope="col">Couple</th>
+              <th scope="col">Person</th>
+              <th scope="col">Bet</th>
+              <th scope="col">$ Bet</th>
+              <th scope="col">$ Won</th>
+              <th scope="col">%</th>
+              <th scope="col">Date</th>
+              <th scope="col">Delete</th>
+              <th scope="col">Edit</th>
+            </tr>
+          </thead>
+          {this.props.rawBets && this.props.rawBets.map(list =>
+            <BetsList key={list.id} list={list} percentColour={this.percentColour}/>)}
+        </table>
+
       </div>
     )
   }

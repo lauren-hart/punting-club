@@ -51,7 +51,7 @@ export class Addbet extends React.Component {
             <td></td>
             <td><input placeholder='date'></input></td>
             <td></td>
-            <td><button>Add</button></td>
+            <td><button onClick={this.handleClick}>Add</button></td>
           </tr>
         </tbody>
       </table>
