@@ -39,17 +39,22 @@ export class Addbet extends React.Component {
 
   render () {
     return (
-      <tr>
-        <td><input placeholder='couple'></input></td>
-        <td><input placeholder='person'></input></td>
-        <td><input placeholder='bet'></input></td>
-        <td><input placeholder='amount bet'></input></td>
-        <td><input placeholder='amount won'></input></td>
-        <td></td>
-        <td><input placeholder='date'></input></td>
-        <td></td>
-        <td><button>Add</button></td>
-      </tr>
+      <table className="addbet">
+        <thead></thead>
+        <tbody>
+          <tr>
+            <td><input placeholder='couple'></input></td>
+            <td><input placeholder='person'></input></td>
+            <td><input placeholder='bet'></input></td>
+            <td><input placeholder='amount bet'></input></td>
+            <td><input placeholder='amount won'></input></td>
+            <td></td>
+            <td><input placeholder='date'></input></td>
+            <td></td>
+            <td><button>Add</button></td>
+          </tr>
+        </tbody>
+      </table>
     )
   }
 }
