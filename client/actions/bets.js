@@ -68,3 +68,21 @@ export function addBet (bet) {
       })
   }
 }
+
+// EDIT BET
+export function editBet (bet, id) {
+  return (dispatch) => {
+    dispatch(getRawBetsPendng())
+    return request
+      .post(`/api/v1/bets/addbet`, bet)
+      .then(res => {
+        dispatch(getRawBetsList(res.body.result))
+        dispatch(getBets())
+        // eslint-disable-next-line no-console
+        console.log('adding your bet')
+      })
+      .catch(err => {
+        dispatch(getBetsError(err.message))
+      })
+  }
+}
