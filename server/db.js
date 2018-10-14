@@ -6,7 +6,8 @@ module.exports = {
   deleteBet,
   addBet,
   getMembers,
-  deleteMember
+  deleteMember,
+  editBet
 }
 
 // GET bets from database
@@ -48,7 +49,22 @@ function getMembers (testDb) {
 // DELETE member from database by id
 function deleteMember (id, testDb) {
   const db = testDb || connection
-  return db('bets')
+  return db('members')
     .where('id', id)
     .del()
+}
+
+// PUT edit bet from database by id
+function editBet (id, bet, testDb) {
+  const db = testDb || connection
+  return db('bets')
+    .where('id', id)
+    .update({
+      person: bet.person,
+      couple: bet.couple,
+      sport: bet.sport,
+      bet: bet.bet,
+      amount_bet: bet.amountBet,
+      amount_won: bet.amountWon
+    })
 }
