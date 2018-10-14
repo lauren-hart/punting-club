@@ -38,4 +38,18 @@ router.post('/addbet', (req, res) => {
     })
 })
 
+// PUT ROUTE (edit bet)
+router.put('/editbet/:id', (req, res) => {
+  const id = req.params.id
+  const bet = req.body
+  db.editBet(id, bet)
+    .then(() => {
+      res.sendStatus(200)
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' +
+      err.message)
+    })
+})
+
 module.exports = router

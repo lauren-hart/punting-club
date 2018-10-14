@@ -74,7 +74,7 @@ export function editBet (bet, id) {
   return (dispatch) => {
     dispatch(getRawBetsPendng())
     return request
-      .post(`/api/v1/bets/addbet`, bet)
+      .put(`/api/v1/bets/editbet/${id}`, bet)
       .then(res => {
         dispatch(getRawBetsList(res.body.result))
         dispatch(getBets())
