@@ -8,8 +8,7 @@ import {
 const defaultState = {
   bets: null,
   error: null,
-  pending: false,
-  editStatus: false
+  pending: false
 }
 
 export default function (state = defaultState, {error, rawBets, type}) {

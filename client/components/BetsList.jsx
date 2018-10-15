@@ -7,7 +7,7 @@ class BetsList extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      editStatus: false,
+      edit: false,
       person: '',
       couple: '',
       sport: '',
@@ -20,6 +20,9 @@ class BetsList extends React.Component {
     this.handleDelete = this.handleDelete.bind(this)
     this.handleEdit = this.handleEdit.bind(this)
     this.sendBet = this.sendBet.bind(this)
+    this.finishEdit = this.finishEdit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+
   }
 
   handleDelete (e) {
@@ -28,21 +31,18 @@ class BetsList extends React.Component {
 
   handleEdit () {
     this.setState({
-      editStatus: !this.state.editStatus
+      edit: !this.state.edit
     })
+  }
+
+  finishEdit (e) {
+    this.sendBet(e.target.value)
   }
 
   handleChange (e) {
     this.setState({
       [e.target.name]: e.target.value
     })
-  }
-
-  handleClick (e) {
-    this.setState({
-      submitted: !this.state.submitted
-    })
-    this.sendBet(e.target.value)
   }
 
   sendBet (id) {
@@ -58,17 +58,17 @@ class BetsList extends React.Component {
       ? Number(0) : ((amountWon / amountBet) * 100).toFixed(0)
     return (
       <tbody>
-        {this.state.editStatus
+        {this.state.edit
           ? <tr>
-            <td><input placeholder={this.props.list.couple}></input></td>
-            <td><input placeholder={this.props.list.person}></input></td>
-            <td><input placeholder={this.props.list.bet}></input></td>
-            <td><input placeholder={accounting.formatMoney(amountBet)}></input></td>
-            <td><input placeholder={accounting.formatMoney(amountWon)}></input></td>
+            <td><input onChange={this.handleChange} placeholder={this.props.list.couple}></input></td>
+            <td><input onChange={this.handleChange} placeholder={this.props.list.person}></input></td>
+            <td><input onChange={this.handleChange} placeholder={this.props.list.bet}></input></td>
+            <td><input onChange={this.handleChange} placeholder={accounting.formatMoney(amountBet)}></input></td>
+            <td><input onChange={this.handleChange} placeholder={accounting.formatMoney(amountWon)}></input></td>
             <td></td>
-            <td><input placeholder={this.props.list.date}></input></td>
+            <td><input onChange={this.handleChange} placeholder={this.props.list.date}></input></td>
             <td></td>
-            <td><button value={this.props.list.id} onClick={this.handleEdit}>Finish</button></td>
+            <td><button value={this.props.list.id} onClick={this.finishEdit}>Finish</button></td>
           </tr>
           : <tr>
             <td>{this.props.list.couple}</td>

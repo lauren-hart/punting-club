@@ -3,7 +3,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 
 import Home from './Home'
 import Bets from './Bets'
-import Addbet from './AddBet'
+import Addbet from './Addbet'
 import Members from './Members'
 
 export default class App extends React.Component {

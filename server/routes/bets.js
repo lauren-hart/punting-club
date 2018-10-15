@@ -43,8 +43,10 @@ router.put('/editbet/:id', (req, res) => {
   const id = req.params.id
   const bet = req.body
   db.editBet(id, bet)
-    .then(() => {
-      res.sendStatus(200)
+    .then(bet => {
+    /* eslint-disable no-console */
+      console.log('sending back edited bet')
+      res.json({bet})
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' +

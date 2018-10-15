@@ -76,10 +76,11 @@ export function editBet (bet, id) {
     return request
       .put(`/api/v1/bets/editbet/${id}`, bet)
       .then(res => {
+        console.log(res.body)
         dispatch(getRawBetsList(res.body.result))
         dispatch(getBets())
         // eslint-disable-next-line no-console
-        console.log('adding your bet')
+        console.log('edited your bet')
       })
       .catch(err => {
         dispatch(getBetsError(err.message))

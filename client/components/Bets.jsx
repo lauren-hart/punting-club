@@ -4,7 +4,7 @@ import {getBets} from '../actions/bets'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import BetsList from './BetsList'
-import Addbet from './Addbet'
+// import Addbet from './Addbet'
 
 class Bets extends React.Component {
   constructor (props) {
