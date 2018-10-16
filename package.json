@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon server & yarn build --watch",
     "build": "webpack --config client/webpack.config.js",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "knex migrate:latest"
   },
   "babel": {
     "presets": [
