@@ -8,14 +8,14 @@ class BetsList extends React.Component {
     super(props)
     this.state = {
       edit: false,
-      person: '',
-      couple: '',
-      sport: '',
-      bet: '',
-      amountBet: '',
-      amountWon: '',
-      date: '',
-      percentage: ''
+      person: this.props.list.person,
+      couple: this.props.list.couple,
+      sport: this.props.list.sport,
+      bet: this.props.list.bet,
+      amountBet: this.props.list.amountBet,
+      amountWon: this.props.list.amountWon,
+      date: this.props.list.date,
+      percentage: this.props.list.percentage
     }
     this.handleDelete = this.handleDelete.bind(this)
     this.handleEdit = this.handleEdit.bind(this)
@@ -63,7 +63,7 @@ class BetsList extends React.Component {
               <input
                 value={this.state.couple}
                 onChange={this.handleChange}
-                placeholder={this.props.list.couple}
+                placeholder={this.state.couple}
                 name="couple">
               </input>
             </td>
