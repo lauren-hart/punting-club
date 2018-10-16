@@ -52,18 +52,18 @@
 
 .header {
   color: white;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   margin: 1%
 }
 
 .nav {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   margin: 1%
 }
 
 footer {
   color: white;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   margin: 1%
 }
 
@@ -74,7 +74,7 @@ footer {
 
 body {
   color: white;
-  font-family: 'Roboto Mono', monospace
+  font-family: 'Raleway', sans-serif;
 }
 
 .table-leaderboard {
