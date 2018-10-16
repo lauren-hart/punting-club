@@ -24,7 +24,6 @@ export function getBets () {
       .get(`/api/v1/bets`)
       .then(res => {
         dispatch(getRawBetsList(res.body.result))
-        console.log(res.body.result)
         // eslint-disable-next-line no-console
         console.log('success')
       })

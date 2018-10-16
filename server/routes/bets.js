@@ -8,7 +8,6 @@ router.use(express.json())
 router.get('/', (req, res) => {
   db.getBets()
     .then(result => {
-      console.log(result)
       res.json({result})
     })
 })

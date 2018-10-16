@@ -1,16 +1,12 @@
 {
   "name": "restful-react-from-scratch",
   "version": "1.0.0",
-  "engines": {
-    "node": "10.9.0"
-  },
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "dev": "nodemon server & yarn build --watch",
     "build": "webpack --config client/webpack.config.js",
-    "test": "jest",
-    "postinstall": "webpack && knex migrate:latest"
+    "test": "jest"
   },
   "babel": {
     "presets": [
@@ -33,10 +29,7 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0",
-    "react": "^16.3.2",
-    "superagent": "^3.8.2",
-    "react-dom": "^16.3.2"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -51,7 +44,10 @@
     "jest": "^22.4.3",
     "jsdom": "^11.8.0",
     "nodemon": "^1.17.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "sqlite3": "^4.0.2",
+    "superagent": "^3.8.2",
     "webpack": "3"
   }
 }
