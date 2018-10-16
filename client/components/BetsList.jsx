@@ -14,8 +14,8 @@ class BetsList extends React.Component {
       bet: this.props.list.bet,
       amountBet: this.props.list.amountBet,
       amountWon: this.props.list.amountWon,
-      date: this.props.list.date,
-      percentage: this.props.list.percentage
+      date: '',
+      percentage: ''
     }
     this.handleDelete = this.handleDelete.bind(this)
     this.handleEdit = this.handleEdit.bind(this)
