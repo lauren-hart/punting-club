@@ -14,7 +14,7 @@ class BetsList extends React.Component {
       bet: this.props.list.bet,
       amountBet: this.props.list.amountBet,
       amountWon: this.props.list.amountWon,
-      date: '',
+      betDate: '',
       percentage: ''
     }
     this.handleDelete = this.handleDelete.bind(this)
@@ -103,10 +103,10 @@ class BetsList extends React.Component {
             </td>
             <td>
               <input
-                value={this.state.date}
+                value={this.state.betDate}
                 onChange={this.handleChange}
-                placeholder={this.props.list.date}
-                name="date">
+                placeholder={this.props.list.betDate}
+                name="betDate">
               </input>
             </td>
             <td></td>
@@ -124,7 +124,7 @@ class BetsList extends React.Component {
             <td>{accounting.formatMoney(amountBet)}</td>
             <td>{accounting.formatMoney(amountWon)}</td>
             <td style={this.props.percentColour(percentage)}>{percentage}%</td>
-            <td>{this.props.list.date}</td>
+            <td>{this.props.list.betDate}</td>
             <td><button value={this.props.list.id} onClick={this.handleDelete}>x</button></td>
             <td><button value={this.props.list.id} onClick={this.handleEdit}>Edit</button></td>
           </tr>
