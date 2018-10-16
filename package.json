@@ -1,6 +1,9 @@
 {
   "name": "restful-react-from-scratch",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.9.0"
+  },
   "main": "index.js",
   "license": "MIT",
   "scripts": {
