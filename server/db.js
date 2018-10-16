@@ -65,6 +65,8 @@ function editBet (id, bet, testDb) {
       sport: bet.sport,
       bet: bet.bet,
       amount_bet: bet.amountBet,
-      amount_won: bet.amountWon
+      amount_won: bet.amountWon,
+      date: bet.date,
+      percentage: bet.percentage
     })
 }
