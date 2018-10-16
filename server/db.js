@@ -14,7 +14,7 @@ module.exports = {
 function getBets (testDb) {
   const db = testDb || connection
   return db('bets')
-    .select('id', 'person', 'couple', 'sport', 'bet', 'amount_bet as amountBet', 'amount_won as amountWon', 'percentage')
+    .select('id', 'person', 'couple', 'sport', 'bet', 'amount_bet as amountBet', 'amount_won as amountWon', 'percentage', 'date')
 }
 
 // DELETE bet from database by id
@@ -35,7 +35,8 @@ function addBet (bet, testDb) {
       sport: bet.sport,
       bet: bet.bet,
       amount_bet: bet.amountBet,
-      amount_won: bet.amountWon
+      amount_won: bet.amountWon,
+      date: bet.date
     })
 }
 
