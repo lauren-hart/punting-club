@@ -12,7 +12,21 @@ class Calculator extends React.Component {
       answer: '',
       isDecimal: false
     }
+    this.handleClick = this.handleClick.bind(this)
   }
+
+  handleClick (e) {
+    const type = e.target.name
+    const key = e.target.value
+    if (type === 'operator') {
+      this.handleOperator(key)
+    } else if (type === 'equals') {
+      this.handleEquals()
+    } else {
+      this.handleDigit(key, type)
+    }
+  }
+  
   render () {
     return (
       <div>

@@ -32605,10 +32605,24 @@ var Calculator = function (_React$Component) {
       answer: '',
       isDecimal: false
     };
+    _this.handleClick = _this.handleClick.bind(_this);
     return _this;
   }
 
   _createClass(Calculator, [{
+    key: 'handleClick',
+    value: function handleClick(e) {
+      var type = e.target.name;
+      var key = e.target.value;
+      if (type === 'operator') {
+        this.handleOperator(key);
+      } else if (type === 'equals') {
+        this.handleEquals();
+      } else {
+        this.handleDigit(key, type);
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
