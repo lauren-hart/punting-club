@@ -4,7 +4,13 @@ class Calculator extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-
+      display: '',
+      lastNum: [],
+      isOperator: false,
+      operator: null,
+      isEquals: false,
+      answer: '',
+      isDecimal: false
     }
   }
   render () {

@@ -32596,7 +32596,15 @@ var Calculator = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Calculator.__proto__ || Object.getPrototypeOf(Calculator)).call(this, props));
 
-    _this.state = {};
+    _this.state = {
+      display: '',
+      lastNum: [],
+      isOperator: false,
+      operator: null,
+      isEquals: false,
+      answer: '',
+      isDecimal: false
+    };
     return _this;
   }
 
