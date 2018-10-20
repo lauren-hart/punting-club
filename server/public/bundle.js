@@ -32606,6 +32606,8 @@ var Calculator = function (_React$Component) {
       isDecimal: false
     };
     _this.handleClick = _this.handleClick.bind(_this);
+    _this.handleOperator = _this.handleOperator.bind(_this);
+
     return _this;
   }
 
@@ -32620,6 +32622,23 @@ var Calculator = function (_React$Component) {
         this.handleEquals();
       } else {
         this.handleDigit(key, type);
+      }
+    }
+  }, {
+    key: 'handleOperator',
+    value: function handleOperator(key) {
+      var answer = this.state.answer;
+      var lastNum = Number(this.state.lastNum);
+      this.setState({
+        isOperator: true,
+        operator: key,
+        display: key,
+        answer: Number(answer) + lastNum
+      });
+      if (answer !== []) {
+        this.setState({
+          lastNum: []
+        });
       }
     }
   }, {

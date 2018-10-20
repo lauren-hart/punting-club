@@ -13,6 +13,8 @@ class Calculator extends React.Component {
       isDecimal: false
     }
     this.handleClick = this.handleClick.bind(this)
+    this.handleOperator = this.handleOperator.bind(this)
+
   }
 
   handleClick (e) {
@@ -26,7 +28,23 @@ class Calculator extends React.Component {
       this.handleDigit(key, type)
     }
   }
-  
+
+  handleOperator (key) {
+    const answer = this.state.answer
+    const lastNum = Number(this.state.lastNum)
+    this.setState({
+      isOperator: true,
+      operator: key,
+      display: key,
+      answer: Number(answer) + lastNum
+    })
+    if (answer !== []) {
+      this.setState({
+        lastNum: []
+      })
+    }
+  }
+
   render () {
     return (
       <div>
