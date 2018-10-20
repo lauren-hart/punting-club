@@ -27851,6 +27851,10 @@ var _Members = __webpack_require__(112);
 
 var _Members2 = _interopRequireDefault(_Members);
 
+var _Calculator = __webpack_require__(116);
+
+var _Calculator2 = _interopRequireDefault(_Calculator);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27883,7 +27887,8 @@ var App = function (_React$Component) {
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/bets', component: _Bets2.default }),
             _react2.default.createElement(_reactRouterDom.Route, { path: '/addbet', component: _Addbet2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/members', component: _Members2.default })
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/members', component: _Members2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/calculator', component: _Calculator2.default })
           )
         )
       );
@@ -32557,6 +32562,15 @@ var defaultState = {
   pending: false,
   editStatus: false
 };
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+q;
 
 /***/ })
 /******/ ]);

@@ -5,6 +5,7 @@ import Home from './Home'
 import Bets from './Bets'
 import Addbet from './Addbet'
 import Members from './Members'
+import Calculator from './Calculator'
 
 export default class App extends React.Component {
   render () {
@@ -16,6 +17,7 @@ export default class App extends React.Component {
             <Route exact path='/bets' component={Bets} />
             <Route path='/addbet' component={Addbet}/>
             <Route path='/members' component={Members}/>
+            <Route path='/calculator' component={Calculator}/>
           </div>
         </Router>
       </div>
