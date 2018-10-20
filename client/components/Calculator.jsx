@@ -1,25 +1,10 @@
 import React from 'react'
-import {connect} from 'react-redux'
 
-class Calculator extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-    }
-  }
+const Calculator = () => (
+  <div>
+    <div className="bg-grass"></div>
+    <h1>Hi</h1>
+  </div>
+)
 
-  render () {
-    return (
-      <div>
-      </div>
-    )
-  }
-}
-
-const mapStateToProps = (state) => {
-  return {
-    rawBets: state.bets.rawBets
-  }
-}
-
-export default connect(mapStateToProps)(Calculator)
+export default Calculator
