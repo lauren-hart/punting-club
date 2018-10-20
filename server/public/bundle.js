@@ -29900,6 +29900,15 @@ var Header = function Header() {
           null,
           'Members'
         )
+      ),
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/calculator' },
+        _react2.default.createElement(
+          'button',
+          null,
+          'Calculator'
+        )
       )
     ),
     _react2.default.createElement(_Login2.default, null)

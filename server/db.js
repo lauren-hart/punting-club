@@ -8,7 +8,9 @@ module.exports = {
   addBet,
   getMembers,
   deleteMember,
-  editBet
+  editBet,
+  createUser,
+  userExists
 }
 
 // GET bets from database
@@ -70,5 +72,22 @@ function editBet (id, bet, testDb) {
       amount_won: bet.amountWon,
       date: bet.date,
       percentage: bet.percentage
+    })
+}
+
+// POST user to database
+function createUser (username, password, conn) {
+  const db = conn || connection
+  return db('users')
+    .insert({username, hash: password})
+}
+
+function userExists (username, conn) {
+  const db = conn || connection
+  return db('users')
+    .count('id as n')
+    .where('username', username)
+    .then(count => {
+      return count[0].n > 0
     })
 }
