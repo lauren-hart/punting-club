@@ -32601,16 +32601,142 @@ var Calculator = function (_React$Component) {
   }
 
   _createClass(Calculator, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
+        'div',
         null,
-        _react2.default.createElement("div", { className: "bg-grass" }),
+        _react2.default.createElement('div', { className: 'bg' }),
         _react2.default.createElement(
-          "h1",
+          'h1',
           null,
-          "Hi"
+          'You do the math...'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'calculator' },
+          _react2.default.createElement(
+            'div',
+            { className: 'display' },
+            _react2.default.createElement('input', {
+              placeholder: '0',
+              value: this.state.display,
+              readOnly: true })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'keys' },
+            _react2.default.createElement(
+              'p',
+              null,
+              _react2.default.createElement(
+                'button',
+                { value: '7', name: 'digit', onClick: this.handleClick, className: 'button blue' },
+                '7'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '8', name: 'digit', onClick: this.handleClick, className: 'button blue' },
+                '8'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '9', name: 'digit', onClick: this.handleClick, className: 'button blue' },
+                '9'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '/', name: 'operator', onClick: this.handleClick, className: 'button white' },
+                '/'
+              )
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              _react2.default.createElement(
+                'button',
+                { value: '4', name: 'digit', onClick: this.handleClick, className: 'button blue' },
+                '4'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '5', name: 'digit', onClick: this.handleClick, className: 'button blue' },
+                '5'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '6', name: 'digit', onClick: this.handleClick, className: 'button blue' },
+                '6'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: 'x', name: 'operator', onClick: this.handleClick, className: 'button white' },
+                'x'
+              )
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              _react2.default.createElement(
+                'button',
+                { value: '1', name: 'digit', onClick: this.handleClick, className: 'button blue' },
+                '1'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '2', name: 'digit', onClick: this.handleClick, className: 'button blue' },
+                '2'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '3', name: 'digit', onClick: this.handleClick, className: 'button blue' },
+                '3'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '-', name: 'operator', onClick: this.handleClick, className: 'button white' },
+                '-'
+              )
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              _react2.default.createElement(
+                'button',
+                { value: '0', name: 'digit', onClick: this.handleClick, className: 'button blue' },
+                '0'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '.', name: 'decimal', onClick: this.handleClick, className: 'button blue' },
+                '.'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '=', name: 'equals', onClick: this.handleClick, className: 'button orange' },
+                '='
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '+', name: 'operator', onClick: this.handleClick, className: 'button white long' },
+                '+'
+              )
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              _react2.default.createElement(
+                'button',
+                { value: '', name: 'digit', onClick: this.handleClear, className: 'button orange' },
+                'AC'
+              ),
+              _react2.default.createElement(
+                'button',
+                { value: '', name: 'digit', onClick: this.handleClearLast, className: 'button orange' },
+                'CE'
+              )
+            )
+          )
         )
       );
     }
