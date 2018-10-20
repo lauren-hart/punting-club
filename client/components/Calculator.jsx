@@ -17,6 +17,7 @@ class Calculator extends React.Component {
     this.handleDigit = this.handleDigit.bind(this)
     this.handleEquals = this.handleEquals.bind(this)
     this.handleClear = this.handleClear.bind(this)
+    this.handleClearLast = this.handleClearLast.bind(this)
 
 
   }
@@ -101,6 +102,13 @@ class Calculator extends React.Component {
       display: '',
       isOperator: false,
       answer: ''
+    })
+  }
+
+  handleClearLast () {
+    this.setState({
+      lastNum: '',
+      display: ''
     })
   }
 
