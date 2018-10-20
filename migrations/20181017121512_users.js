@@ -3,7 +3,7 @@ exports.up = (knex, Promise) => {
     t.increments('id').primary()
     t.string('name')
     t.string('email').unique()
-    t.string('password')
+    t.string('hash')
     t.string('couple')
     t.string('imagesolo')
     t.string('imagecouple')

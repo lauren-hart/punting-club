@@ -27851,6 +27851,10 @@ var _Members = __webpack_require__(112);
 
 var _Members2 = _interopRequireDefault(_Members);
 
+var _Calculator = __webpack_require__(116);
+
+var _Calculator2 = _interopRequireDefault(_Calculator);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27883,7 +27887,8 @@ var App = function (_React$Component) {
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/bets', component: _Bets2.default }),
             _react2.default.createElement(_reactRouterDom.Route, { path: '/addbet', component: _Addbet2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/members', component: _Members2.default })
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/members', component: _Members2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/calculator', component: _Calculator2.default })
           )
         )
       );
@@ -29899,6 +29904,15 @@ var Header = function Header() {
           'button',
           null,
           'Members'
+        )
+      ),
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/calculator' },
+        _react2.default.createElement(
+          'button',
+          null,
+          'Calculator'
         )
       )
     ),
@@ -32548,6 +32562,64 @@ var defaultState = {
   pending: false,
   editStatus: false
 };
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Calculator = function (_React$Component) {
+  _inherits(Calculator, _React$Component);
+
+  function Calculator(props) {
+    _classCallCheck(this, Calculator);
+
+    var _this = _possibleConstructorReturn(this, (Calculator.__proto__ || Object.getPrototypeOf(Calculator)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Calculator, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement("div", { className: "bg-grass" }),
+        _react2.default.createElement(
+          "h1",
+          null,
+          "Hi"
+        )
+      );
+    }
+  }]);
+
+  return Calculator;
+}(_react2.default.Component);
+
+exports.default = Calculator;
 
 /***/ })
 /******/ ]);
