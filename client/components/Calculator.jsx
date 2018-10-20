@@ -14,6 +14,7 @@ class Calculator extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleOperator = this.handleOperator.bind(this)
+    this.handleDigit = this.handleDigit.bind(this)
 
   }
 
@@ -41,6 +42,25 @@ class Calculator extends React.Component {
     if (answer !== []) {
       this.setState({
         lastNum: []
+      })
+    }
+  }
+
+  handleDigit (key, type) {
+    const lastNum = this.state.lastNum
+    if (type === 'decimal') {
+      if (!this.state.isDecimal) {
+        this.setState({
+          lastNum: lastNum + key,
+          display: lastNum + key,
+          isDecimal: true
+        })
+      }
+    } else {
+      this.setState({
+        lastNum: lastNum + key,
+        display: lastNum + key,
+        isDecimal: false
       })
     }
   }
