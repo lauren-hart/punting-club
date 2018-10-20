@@ -32609,6 +32609,7 @@ var Calculator = function (_React$Component) {
     _this.handleOperator = _this.handleOperator.bind(_this);
     _this.handleDigit = _this.handleDigit.bind(_this);
     _this.handleEquals = _this.handleEquals.bind(_this);
+    _this.handleClear = _this.handleClear.bind(_this);
 
     return _this;
   }
@@ -32690,6 +32691,16 @@ var Calculator = function (_React$Component) {
           display: answer * lastNum
         });
       }
+    }
+  }, {
+    key: 'handleClear',
+    value: function handleClear() {
+      this.setState({
+        lastNum: '',
+        display: '',
+        isOperator: false,
+        answer: ''
+      });
     }
   }, {
     key: 'render',
