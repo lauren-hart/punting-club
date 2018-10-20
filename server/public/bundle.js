@@ -32608,6 +32608,7 @@ var Calculator = function (_React$Component) {
     _this.handleClick = _this.handleClick.bind(_this);
     _this.handleOperator = _this.handleOperator.bind(_this);
     _this.handleDigit = _this.handleDigit.bind(_this);
+    _this.handleEquals = _this.handleEquals.bind(_this);
 
     return _this;
   }
@@ -32659,6 +32660,34 @@ var Calculator = function (_React$Component) {
           lastNum: lastNum + key,
           display: lastNum + key,
           isDecimal: false
+        });
+      }
+    }
+  }, {
+    key: 'handleEquals',
+    value: function handleEquals() {
+      var operator = this.state.operator;
+      var answer = Number(this.state.answer);
+      var lastNum = Number(this.state.lastNum);
+      if (operator === '+') {
+        this.setState({
+          answer: answer + lastNum,
+          display: answer + lastNum
+        });
+      } else if (operator === '-') {
+        this.setState({
+          answer: answer - lastNum,
+          display: answer - lastNum
+        });
+      } else if (operator === '/') {
+        this.setState({
+          answer: answer / lastNum,
+          display: answer / lastNum
+        });
+      } else if (operator === 'x') {
+        this.setState({
+          answer: answer * lastNum,
+          display: answer * lastNum
         });
       }
     }

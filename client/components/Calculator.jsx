@@ -15,6 +15,7 @@ class Calculator extends React.Component {
     this.handleClick = this.handleClick.bind(this)
     this.handleOperator = this.handleOperator.bind(this)
     this.handleDigit = this.handleDigit.bind(this)
+    this.handleEquals = this.handleEquals.bind(this)
 
   }
 
@@ -61,6 +62,33 @@ class Calculator extends React.Component {
         lastNum: lastNum + key,
         display: lastNum + key,
         isDecimal: false
+      })
+    }
+  }
+
+  handleEquals () {
+    const operator = this.state.operator
+    const answer = Number(this.state.answer)
+    const lastNum = Number(this.state.lastNum)
+    if (operator === '+') {
+      this.setState({
+        answer: (answer + lastNum),
+        display: (answer + lastNum)
+      })
+    } else if (operator === '-') {
+      this.setState({
+        answer: answer - lastNum,
+        display: (answer - lastNum)
+      })
+    } else if (operator === '/') {
+      this.setState({
+        answer: answer / lastNum,
+        display: (answer / lastNum)
+      })
+    } else if (operator === 'x') {
+      this.setState({
+        answer: answer * lastNum,
+        display: (answer * lastNum)
       })
     }
   }
