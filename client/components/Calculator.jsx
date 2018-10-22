@@ -115,8 +115,8 @@ class Calculator extends React.Component {
   render () {
     return (
       <div>
-        <div className="bg"></div>
-        <h1>You do the math...</h1>
+        <div className="bg-calc"></div>
+        <h1 className="calc">You do the math...</h1>
         <div className='calculator'>
           <div className="display">
             <input

@@ -242,7 +242,7 @@ p {
   line-height: 10px;
 }
 
-h1 {
+.calc {
   text-align: center;
   margin-top: 2%;
   font-family: 'Mali', cursive;
@@ -250,8 +250,8 @@ h1 {
   font-size: 45px
 }
 
-/* .bg {
-  background-image: url("./background.jpg");
+.bg-calc {
+  background-image: url("./images/background.jpg");
   background-color: grey;
   background-position: center;
   position: fixed;
@@ -270,5 +270,5 @@ h1 {
   width: 100vw;
   display:flex;
   align-items: center;
-} */
+}
 

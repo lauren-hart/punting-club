@@ -32717,10 +32717,10 @@ var Calculator = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement('div', { className: 'bg' }),
+        _react2.default.createElement('div', { className: 'bg-calc' }),
         _react2.default.createElement(
           'h1',
-          null,
+          { className: 'calc' },
           'You do the math...'
         ),
         _react2.default.createElement(
