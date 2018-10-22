@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class Calculator extends React.Component {
   constructor (props) {
@@ -18,8 +19,6 @@ class Calculator extends React.Component {
     this.handleEquals = this.handleEquals.bind(this)
     this.handleClear = this.handleClear.bind(this)
     this.handleClearLast = this.handleClearLast.bind(this)
-
-
   }
 
   handleClick (e) {
@@ -116,10 +115,16 @@ class Calculator extends React.Component {
     return (
       <div>
         <div className="bg-calc"></div>
+        <div className="nav">
+          <Link to="/"><button>Home</button></Link>
+          <Link to="/bets"><button>Bets</button></Link>
+          <Link to="/members"><button>Members</button></Link>
+        </div>
         <h1 className="calc">You do the math...</h1>
         <div className='calculator'>
           <div className="display">
             <input
+              className="calc-input"
               placeholder="0"
               value={this.state.display}
               readOnly>
