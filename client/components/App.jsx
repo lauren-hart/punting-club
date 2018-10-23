@@ -6,6 +6,7 @@ import Bets from './Bets'
 import Addbet from './Addbet'
 import Members from './Members'
 import Calculator from './Calculator'
+import Horoscopes from './Horoscopes'
 
 export default class App extends React.Component {
   render () {
@@ -18,6 +19,7 @@ export default class App extends React.Component {
             <Route path='/addbet' component={Addbet}/>
             <Route path='/members' component={Members}/>
             <Route path='/calculator' component={Calculator}/>
+            <Route path='/horoscopes' component={Horoscopes}/>
           </div>
         </Router>
       </div>
