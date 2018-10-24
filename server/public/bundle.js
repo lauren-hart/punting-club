@@ -30041,7 +30041,7 @@ var Login = function (_React$Component) {
             this.state.input
           ) : _react2.default.createElement(
             'p',
-            { style: { opacity: '100%' } },
+            { style: { opacity: '0' } },
             'Hi'
           )
         )
