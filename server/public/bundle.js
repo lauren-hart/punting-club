@@ -30032,9 +30032,18 @@ var Login = function (_React$Component) {
           'Clear'
         ),
         _react2.default.createElement(
-          'p',
-          { className: 'input-name' },
-          this.state.isSubmitted ? 'Hello ' + this.state.input : ''
+          'div',
+          null,
+          this.state.isSubmitted ? _react2.default.createElement(
+            'p',
+            { className: 'input-name' },
+            'Hello ',
+            this.state.input
+          ) : _react2.default.createElement(
+            'p',
+            { style: { opacity: '100%' } },
+            'Hi'
+          )
         )
       );
     }
