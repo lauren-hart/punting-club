@@ -32635,7 +32635,7 @@ var Calculator = function (_React$Component) {
             { className: 'keys' },
             _react2.default.createElement(
               'p',
-              null,
+              { className: 'p-calc' },
               _react2.default.createElement(
                 'button',
                 { value: '7', name: 'digit', onClick: this.handleClick, className: 'button blue' },
@@ -32659,7 +32659,7 @@ var Calculator = function (_React$Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: 'p-calc' },
               _react2.default.createElement(
                 'button',
                 { value: '4', name: 'digit', onClick: this.handleClick, className: 'button blue' },
@@ -32683,7 +32683,7 @@ var Calculator = function (_React$Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: 'p-calc' },
               _react2.default.createElement(
                 'button',
                 { value: '1', name: 'digit', onClick: this.handleClick, className: 'button blue' },
@@ -32707,7 +32707,7 @@ var Calculator = function (_React$Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: 'p-calc' },
               _react2.default.createElement(
                 'button',
                 { value: '0', name: 'digit', onClick: this.handleClick, className: 'button blue' },
@@ -32731,7 +32731,7 @@ var Calculator = function (_React$Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: 'p-calc' },
               _react2.default.createElement(
                 'button',
                 { value: '', name: 'digit', onClick: this.handleClear, className: 'button orange' },
