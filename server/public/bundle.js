@@ -29817,7 +29817,7 @@ var Home = function (_React$Component) {
         _react2.default.createElement(_Header2.default, null),
         _react2.default.createElement(
           'div',
-          { className: 'row' },
+          { className: 'row row-1' },
           _react2.default.createElement(
             'div',
             { className: 'col-md-2' },

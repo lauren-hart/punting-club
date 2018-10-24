@@ -35,7 +35,7 @@ class Home extends React.Component {
     return (
       <div className="container-fluid">
         <Header />
-        <div className="row">
+        <div className="row row-1">
           <div className="col-md-2">
             <Timetable />
           </div>
