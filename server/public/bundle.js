@@ -29877,60 +29877,55 @@ var Header = function Header() {
     null,
     _react2.default.createElement('div', { className: 'bg-grass' }),
     _react2.default.createElement(
-      'h1',
-      { className: 'header' },
-      'Raro Punt Club'
-    ),
-    _react2.default.createElement(
       'div',
-      { className: 'nav' },
+      { className: 'col-md-4' },
       _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/' },
-        _react2.default.createElement(
-          'button',
-          null,
-          'Home'
-        )
+        'h1',
+        { className: 'header' },
+        'Raro Punt Club'
       ),
       _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/bets' },
+        'div',
+        { className: 'nav' },
         _react2.default.createElement(
-          'button',
-          null,
-          'Bets'
+          _reactRouterDom.Link,
+          { to: '/' },
+          _react2.default.createElement(
+            'button',
+            null,
+            'Home'
+          )
+        ),
+        _react2.default.createElement(
+          _reactRouterDom.Link,
+          { to: '/bets' },
+          _react2.default.createElement(
+            'button',
+            null,
+            'Bets'
+          )
+        ),
+        _react2.default.createElement(
+          _reactRouterDom.Link,
+          { to: '/members' },
+          _react2.default.createElement(
+            'button',
+            null,
+            'Members'
+          )
+        ),
+        _react2.default.createElement(
+          _reactRouterDom.Link,
+          { to: '/calculator' },
+          _react2.default.createElement(
+            'button',
+            null,
+            'Calculator'
+          )
         )
       ),
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/members' },
-        _react2.default.createElement(
-          'button',
-          null,
-          'Members'
-        )
-      ),
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/calculator' },
-        _react2.default.createElement(
-          'button',
-          null,
-          'Calculator'
-        )
-      ),
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/horoscopes' },
-        _react2.default.createElement(
-          'button',
-          null,
-          'Horoscopes'
-        )
-      )
-    ),
-    _react2.default.createElement(_Login2.default, null)
+      _react2.default.createElement(_Login2.default, null)
+    )
   );
 };
 
