@@ -30042,7 +30042,7 @@ var Login = function (_React$Component) {
           ) : _react2.default.createElement(
             'p',
             { style: { opacity: '0' } },
-            'Hi'
+            '0'
           )
         )
       );
