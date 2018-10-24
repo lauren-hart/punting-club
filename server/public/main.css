@@ -280,3 +280,8 @@ body {
 .row-1 {
   margin-top: 3%
 }
+
+.balance {
+  margin-top: 3%;
+  text-align: center
+}
