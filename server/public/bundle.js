@@ -29869,6 +29869,10 @@ var _Login = __webpack_require__(101);
 
 var _Login2 = _interopRequireDefault(_Login);
 
+var _Balance = __webpack_require__(119);
+
+var _Balance2 = _interopRequireDefault(_Balance);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Header = function Header() {
@@ -29925,6 +29929,11 @@ var Header = function Header() {
         )
       ),
       _react2.default.createElement(_Login2.default, null)
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'col-md-4' },
+      _react2.default.createElement(_Balance2.default, null)
     )
   );
 };
@@ -33092,6 +33101,37 @@ function getDuckDuck() {
     console.log(err.message);
   });
 }
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Balance = function Balance() {
+  return _react2.default.createElement(
+    "div",
+    { className: "container-fluid" },
+    _react2.default.createElement(
+      "h1",
+      null,
+      "Balance $"
+    )
+  );
+};
+
+exports.default = Balance;
 
 /***/ })
 /******/ ]);

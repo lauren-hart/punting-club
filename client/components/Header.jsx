@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Login from './Login'
+import Balance from './Balance'
 
 const Header = () => (
   <div>
@@ -15,6 +16,9 @@ const Header = () => (
         {/* <Link to="/horoscopes"><button>Horoscopes</button></Link> */}
       </div>
       <Login />
+    </div>
+    <div className="col-md-4">
+      <Balance />
     </div>
   </div>
 )
