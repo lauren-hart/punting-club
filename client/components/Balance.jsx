@@ -18,9 +18,9 @@ class Balance extends React.Component {
     })
     const totalAmountBet = amountBet && amountBet.reduce((a, b) => a + b, 0)
     return (
-      <div>
-        <h4 className="balance">Holiday Fund</h4>
-        <h4 className="balance">{accounting.formatMoney(totalAmountBet)}</h4>
+      <div className="balance">
+        <h4>Holiday Fund</h4>
+        <h4>{accounting.formatMoney(totalAmountBet)}</h4>
       </div>
     )
   }

@@ -30123,15 +30123,15 @@ var Balance = function (_React$Component) {
       }, 0);
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'balance' },
         _react2.default.createElement(
           'h4',
-          { className: 'balance' },
+          null,
           'Holiday Fund'
         ),
         _react2.default.createElement(
           'h4',
-          { className: 'balance' },
+          null,
           _accounting.accounting.formatMoney(totalAmountBet)
         )
       );
