@@ -30108,25 +30108,23 @@ var Balance = function (_React$Component) {
     _this.state = {
       amountBet: ''
     };
-    _this.totalAmountWon = _this.totalAmountWon.bind(_this);
     return _this;
   }
 
   _createClass(Balance, [{
     key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.totalAmountWon();
-    }
-  }, {
-    key: 'totalAmountWon',
-    value: function totalAmountWon() {
-      return this.props.rawBets && this.props.rawBets.map(function (item) {
-        return isNaN(item.amountWon) ? Number(0) : Number(item.amountWon);
-      });
-    }
+    value: function componentDidMount() {}
   }, {
     key: 'render',
     value: function render() {
+      var test = this.props.rawBets && this.props.rawBets.map(function (item) {
+        return isNaN(item.amountWon) ? Number(0) : Number(item.amountWon);
+      });
+      var test2 = test && test.reduce(function (a, b) {
+        return a + b;
+      }, 0);
+      console.log(test);
+      console.log(test2);
       return _react2.default.createElement(
         'div',
         null,
