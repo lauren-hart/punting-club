@@ -30105,9 +30105,7 @@ var Balance = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Balance.__proto__ || Object.getPrototypeOf(Balance)).call(this, props));
 
-    _this.state = {
-      amountBet: ''
-    };
+    _this.state = {};
     return _this;
   }
 
@@ -30117,14 +30115,12 @@ var Balance = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var test = this.props.rawBets && this.props.rawBets.map(function (item) {
+      var amountBet = this.props.rawBets && this.props.rawBets.map(function (item) {
         return isNaN(item.amountWon) ? Number(0) : Number(item.amountWon);
       });
-      var test2 = test && test.reduce(function (a, b) {
+      var totalAmountBet = amountBet && amountBet.reduce(function (a, b) {
         return a + b;
       }, 0);
-      console.log(test);
-      console.log(test2);
       return _react2.default.createElement(
         'div',
         null,
@@ -30136,7 +30132,7 @@ var Balance = function (_React$Component) {
         _react2.default.createElement(
           'h4',
           { className: 'balance' },
-          _accounting.accounting.formatMoney(test2)
+          _accounting.accounting.formatMoney(totalAmountBet)
         )
       );
     }
