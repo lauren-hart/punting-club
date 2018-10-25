@@ -1,5 +1,5 @@
 * { 
-  outline: 1px solid #947676 !important; 
+  outline: 1px transparent #947676 !important; 
   } 
   
    * { 
@@ -286,6 +286,9 @@ body {
   text-align: center;
   width: 40%;
   padding: 2%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 50%;
+  background: #EFEEEE;
+  color:black;
+  font-size: 1.1em;
+  opacity: 0.8;
 }

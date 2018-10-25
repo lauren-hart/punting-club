@@ -18,6 +18,7 @@ const Header = () => (
         </div>
         <Login />
       </div>
+      <div className="col-md-4"></div>
       <div className="col-md-4">
         <Balance />
       </div>

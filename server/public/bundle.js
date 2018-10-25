@@ -29933,6 +29933,7 @@ var Header = function Header() {
         ),
         _react2.default.createElement(_Login2.default, null)
       ),
+      _react2.default.createElement('div', { className: 'col-md-4' }),
       _react2.default.createElement(
         'div',
         { className: 'col-md-4' },
