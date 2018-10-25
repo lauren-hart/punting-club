@@ -8,7 +8,7 @@ const Header = () => (
     <div className="bg-grass"></div>
     <div className="row">
       <div className="col-md-4">
-        <h1 className="header">Raro Punt Club</h1>
+        <h1 className="header">Punt Club</h1>
         <div className="nav">
           <Link to="/"><button>Home</button></Link>
           <Link to="/bets"><button>Bets</button></Link>

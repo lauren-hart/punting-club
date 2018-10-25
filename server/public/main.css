@@ -1,5 +1,5 @@
 * { 
-  outline: 1px solid #947676 !important; 
+  outline: 1px transparent #947676 !important; 
   } 
   
    * { 
@@ -282,6 +282,6 @@ body {
 }
 
 .balance {
-  margin-top: 3%;
+  margin-top: 10%;
   text-align: center
 }
