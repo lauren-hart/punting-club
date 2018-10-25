@@ -8,6 +8,11 @@ class Balance extends React.Component {
     this.state = {
       amountBet: ''
     }
+    this.totalAmountWon = this.totalAmountWon.bind(this)
+  }
+
+  componentDidMount () {
+    this.totalAmountWon()
   }
 
   totalAmountWon () {

@@ -30108,10 +30108,16 @@ var Balance = function (_React$Component) {
     _this.state = {
       amountBet: ''
     };
+    _this.totalAmountWon = _this.totalAmountWon.bind(_this);
     return _this;
   }
 
   _createClass(Balance, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.totalAmountWon();
+    }
+  }, {
     key: 'totalAmountWon',
     value: function totalAmountWon() {
       return this.props.rawBets && this.props.rawBets.map(function (item) {
