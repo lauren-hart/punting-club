@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-// import {accounting} from 'accounting'
+import {accounting} from 'accounting'
 
 class Balance extends React.Component {
   constructor (props) {
@@ -22,7 +22,8 @@ class Balance extends React.Component {
     console.log(test2)
     return (
       <div>
-        <h4 className="balance">Balance $</h4>
+        <h4 className="balance">Holiday Fund</h4>
+        <h4 className="balance">{accounting.formatMoney(test2)}</h4>
       </div>
     )
   }
