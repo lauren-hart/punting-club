@@ -30025,7 +30025,7 @@ var Summary = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'table-leaderboard' },
         _react2.default.createElement(
           'h3',
           { className: 'header leaderboard-h3' },
@@ -30033,7 +30033,7 @@ var Summary = function (_React$Component) {
         ),
         _react2.default.createElement(
           'table',
-          { className: 'table table-leaderboard' },
+          { className: 'table' },
           _react2.default.createElement(
             'thead',
             null,

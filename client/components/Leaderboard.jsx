@@ -45,9 +45,9 @@ class Summary extends React.Component {
     const third = sortCouplesPercent[2]
 
     return (
-      <div>
+      <div className="table-leaderboard">
         <h3 className="header leaderboard-h3">Leaderboard</h3>
-        <table className="table table-leaderboard">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">Position</th>
