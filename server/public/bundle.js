@@ -29762,14 +29762,6 @@ var _Timetable = __webpack_require__(109);
 
 var _Timetable2 = _interopRequireDefault(_Timetable);
 
-var _Balance = __webpack_require__(102);
-
-var _Balance2 = _interopRequireDefault(_Balance);
-
-var _Login = __webpack_require__(101);
-
-var _Login2 = _interopRequireDefault(_Login);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29777,6 +29769,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import Balance from './Balance'
+// import Login from './Login'
 
 var Home = function (_React$Component) {
   _inherits(Home, _React$Component);
@@ -29838,11 +29833,7 @@ var Home = function (_React$Component) {
             { className: 'col-md-6' },
             _react2.default.createElement(_Timetable2.default, null)
           ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-md-3' },
-            _react2.default.createElement(_Balance2.default, null)
-          )
+          _react2.default.createElement('div', { className: 'col-md-3' })
         ),
         _react2.default.createElement(
           'div',
@@ -29854,11 +29845,7 @@ var Home = function (_React$Component) {
             _react2.default.createElement(_Leaderboard2.default, {
               percentColour: this.percentColour })
           ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-md-3' },
-            _react2.default.createElement(_Login2.default, null)
-          )
+          _react2.default.createElement('div', { className: 'col-md-3' })
         )
       );
     }
@@ -29911,7 +29898,7 @@ var Header = function Header() {
         { to: '/' },
         _react2.default.createElement(
           'button',
-          null,
+          { className: 'nav-button' },
           'Home'
         )
       ),
@@ -29920,7 +29907,7 @@ var Header = function Header() {
         { to: '/bets' },
         _react2.default.createElement(
           'button',
-          null,
+          { className: 'nav-button' },
           'Bets'
         )
       ),
@@ -29929,7 +29916,7 @@ var Header = function Header() {
         { to: '/members' },
         _react2.default.createElement(
           'button',
-          null,
+          { className: 'nav-button' },
           'Members'
         )
       ),
@@ -29938,7 +29925,7 @@ var Header = function Header() {
         { to: '/calculator' },
         _react2.default.createElement(
           'button',
-          null,
+          { className: 'nav-button' },
           'Calculator'
         )
       )
@@ -29949,211 +29936,8 @@ var Header = function Header() {
 exports.default = Header;
 
 /***/ }),
-/* 101 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(3);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Login = function (_React$Component) {
-  _inherits(Login, _React$Component);
-
-  function Login(props) {
-    _classCallCheck(this, Login);
-
-    var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
-
-    _this.state = {
-      input: '',
-      isSubmitted: false,
-      submit: ''
-    };
-    _this.handleSubmit = _this.handleSubmit.bind(_this);
-    _this.handleClear = _this.handleClear.bind(_this);
-    _this.handleChange = _this.handleChange.bind(_this);
-    return _this;
-  }
-
-  _createClass(Login, [{
-    key: 'handleSubmit',
-    value: function handleSubmit(e) {
-      if (e.keyCode === 13 && this.state.submit === '') {
-        this.setState({
-          isSubmitted: !this.state.isSubmitted,
-          submit: e.target.value
-        });
-      }
-    }
-  }, {
-    key: 'handleClear',
-    value: function handleClear() {
-      this.setState({
-        isSubmitted: false,
-        submit: '',
-        input: ''
-      });
-    }
-  }, {
-    key: 'handleChange',
-    value: function handleChange(e) {
-      this.setState({
-        input: e.target.value
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement('input', {
-          placeholder: 'Enter your name',
-          className: 'input-name',
-          onChange: this.handleChange,
-          onKeyUp: this.handleSubmit,
-          value: this.state.input
-        }),
-        _react2.default.createElement(
-          'button',
-          { onClick: this.handleClick },
-          'Enter'
-        ),
-        _react2.default.createElement(
-          'button',
-          { onClick: this.handleClear },
-          'Clear'
-        ),
-        _react2.default.createElement(
-          'div',
-          null,
-          this.state.isSubmitted ? _react2.default.createElement(
-            'p',
-            { className: 'input-name' },
-            'Hello ',
-            this.state.input
-          ) : _react2.default.createElement(
-            'p',
-            { style: { opacity: '0' } },
-            '0'
-          )
-        )
-      );
-    }
-  }]);
-
-  return Login;
-}(_react2.default.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    rawBets: state.bets.rawBets
-  };
-};
-
-exports.default = (0, _reactRedux.connect)(mapStateToProps)(Login);
-
-/***/ }),
-/* 102 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(3);
-
-var _accounting = __webpack_require__(21);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Balance = function (_React$Component) {
-  _inherits(Balance, _React$Component);
-
-  function Balance(props) {
-    _classCallCheck(this, Balance);
-
-    var _this = _possibleConstructorReturn(this, (Balance.__proto__ || Object.getPrototypeOf(Balance)).call(this, props));
-
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(Balance, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {}
-  }, {
-    key: 'render',
-    value: function render() {
-      var amountBet = this.props.rawBets && this.props.rawBets.map(function (item) {
-        return isNaN(item.amountWon) ? Number(0) : Number(item.amountWon);
-      });
-      var totalAmountBet = amountBet && amountBet.reduce(function (a, b) {
-        return a + b;
-      }, 0);
-      return _react2.default.createElement(
-        'div',
-        { className: 'balance' },
-        _react2.default.createElement(
-          'h4',
-          null,
-          'Holiday Fund'
-        ),
-        _react2.default.createElement(
-          'h4',
-          null,
-          _accounting.accounting.formatMoney(totalAmountBet)
-        )
-      );
-    }
-  }]);
-
-  return Balance;
-}(_react2.default.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    rawBets: state.bets.rawBets
-  };
-};
-
-exports.default = (0, _reactRedux.connect)(mapStateToProps)(Balance);
-
-/***/ }),
+/* 101 */,
+/* 102 */,
 /* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31597,7 +31381,7 @@ var Timetable = function (_React$Component) {
           'div',
           { className: 'timetable' },
           _react2.default.createElement(
-            'p',
+            'span',
             null,
             this.setWeekday()
           )
