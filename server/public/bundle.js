@@ -29883,7 +29883,7 @@ var Header = function Header() {
     ),
     _react2.default.createElement(
       'div',
-      { className: 'nav' },
+      { className: 'btn-group-vertical' },
       _react2.default.createElement(
         _reactRouterDom.Link,
         { to: '/' },
