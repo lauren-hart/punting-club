@@ -29841,7 +29841,8 @@ var Home = function (_React$Component) {
             { className: 'col-md-6 leaderboard' },
             _react2.default.createElement(_Leaderboard2.default, {
               percentColour: this.percentColour })
-          )
+          ),
+          _react2.default.createElement('div', { className: 'col-md-3' })
         )
       );
     }

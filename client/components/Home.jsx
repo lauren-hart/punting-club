@@ -46,12 +46,14 @@ class Home extends React.Component {
           </div>
           <div className="col-md-3"></div>
         </div>
+
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-6 leaderboard">
             <Leaderboard
               percentColour={this.percentColour}/>
           </div>
+          <div className="col-md-3"></div>
         </div>
       </div>
     )
