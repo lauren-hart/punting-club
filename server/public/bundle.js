@@ -29819,17 +29819,30 @@ var Home = function (_React$Component) {
           'div',
           { className: 'sidebar' },
           _react2.default.createElement(_Header2.default, null),
-          _react2.default.createElement(_Timetable2.default, null),
           _react2.default.createElement(_Footer2.default, null)
         ),
-        _react2.default.createElement('div', { className: 'col-md-1' }),
         _react2.default.createElement(
           'div',
-          { className: 'col-md-6 leaderboard' },
-          _react2.default.createElement(_Leaderboard2.default, {
-            percentColour: this.percentColour })
+          { className: 'row' },
+          _react2.default.createElement('div', { className: 'col-md-3' }),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-6' },
+            _react2.default.createElement(_Timetable2.default, null)
+          ),
+          _react2.default.createElement('div', { className: 'col-md-3' })
         ),
-        _react2.default.createElement('div', { className: 'col-md-3' })
+        _react2.default.createElement(
+          'div',
+          { className: 'row' },
+          _react2.default.createElement('div', { className: 'col-md-3' }),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-6 leaderboard' },
+            _react2.default.createElement(_Leaderboard2.default, {
+              percentColour: this.percentColour })
+          )
+        )
       );
     }
   }]);
