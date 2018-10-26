@@ -51,7 +51,6 @@
   }
 
 .header {
-  color: white;
   font-family: 'Montserrat', sans-serif;
   margin: 1%
 }
@@ -62,7 +61,6 @@
 }
 
 footer {
-  color: white;
   font-family: 'Montserrat', sans-serif;
   margin: 1%
 }
@@ -98,7 +96,6 @@ body {
 }
 
 .timetable {
-  color: white;
   font-size: 1.3em;
   margin-left: 6%;
   margin-top: 20%;
@@ -281,15 +278,17 @@ body {
   margin-top: 3%
 }
 
-.balance {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 200px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    right: 0;
-    background-color: #111; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    text-align: center
+.sidebar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 250px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background: #EFEEEE;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.8;
 }

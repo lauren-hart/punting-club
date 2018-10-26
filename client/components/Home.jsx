@@ -34,19 +34,18 @@ class Home extends React.Component {
   render () {
     return (
       <div className="container-fluid">
-        <Header />
-        <div className="row row-1">
-          <div className="col-md-2">
-            <Timetable />
-          </div>
-          <div className="col-md-1"></div>
-          <div className="col-md-6 leaderboard">
-            <Leaderboard
-              percentColour={this.percentColour}/>
-          </div>
-          <div className="col-md-3"></div>
+        <div className="bg-grass"></div>
+        <div className="sidebar">
+          <Header />
+          <Timetable />
+          <Footer />
         </div>
-        <Footer />
+        <div className="col-md-1"></div>
+        <div className="col-md-6 leaderboard">
+          <Leaderboard
+            percentColour={this.percentColour}/>
+        </div>
+        <div className="col-md-3"></div>
       </div>
     )
   }

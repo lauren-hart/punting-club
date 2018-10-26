@@ -29814,25 +29814,22 @@ var Home = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'container-fluid' },
-        _react2.default.createElement(_Header2.default, null),
+        _react2.default.createElement('div', { className: 'bg-grass' }),
         _react2.default.createElement(
           'div',
-          { className: 'row row-1' },
-          _react2.default.createElement(
-            'div',
-            { className: 'col-md-2' },
-            _react2.default.createElement(_Timetable2.default, null)
-          ),
-          _react2.default.createElement('div', { className: 'col-md-1' }),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-md-6 leaderboard' },
-            _react2.default.createElement(_Leaderboard2.default, {
-              percentColour: this.percentColour })
-          ),
-          _react2.default.createElement('div', { className: 'col-md-3' })
+          { className: 'sidebar' },
+          _react2.default.createElement(_Header2.default, null),
+          _react2.default.createElement(_Timetable2.default, null),
+          _react2.default.createElement(_Footer2.default, null)
         ),
-        _react2.default.createElement(_Footer2.default, null)
+        _react2.default.createElement('div', { className: 'col-md-1' }),
+        _react2.default.createElement(
+          'div',
+          { className: 'col-md-6 leaderboard' },
+          _react2.default.createElement(_Leaderboard2.default, {
+            percentColour: this.percentColour })
+        ),
+        _react2.default.createElement('div', { className: 'col-md-3' })
       );
     }
   }]);
@@ -29879,67 +29876,53 @@ var Header = function Header() {
   return _react2.default.createElement(
     'div',
     null,
-    _react2.default.createElement('div', { className: 'bg-grass' }),
+    _react2.default.createElement(
+      'h1',
+      { className: 'header' },
+      'Punt Club'
+    ),
     _react2.default.createElement(
       'div',
-      { className: 'row' },
+      { className: 'nav' },
       _react2.default.createElement(
-        'div',
-        { className: 'col-md-4' },
+        _reactRouterDom.Link,
+        { to: '/' },
         _react2.default.createElement(
-          'h1',
-          { className: 'header' },
-          'Punt Club'
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'nav' },
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { to: '/' },
-            _react2.default.createElement(
-              'button',
-              null,
-              'Home'
-            )
-          ),
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { to: '/bets' },
-            _react2.default.createElement(
-              'button',
-              null,
-              'Bets'
-            )
-          ),
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { to: '/members' },
-            _react2.default.createElement(
-              'button',
-              null,
-              'Members'
-            )
-          ),
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { to: '/calculator' },
-            _react2.default.createElement(
-              'button',
-              null,
-              'Calculator'
-            )
-          )
-        ),
-        _react2.default.createElement(_Login2.default, null)
+          'button',
+          null,
+          'Home'
+        )
       ),
-      _react2.default.createElement('div', { className: 'col-md-4' }),
       _react2.default.createElement(
-        'div',
-        { className: 'col-md-4' },
-        _react2.default.createElement(_Balance2.default, null)
+        _reactRouterDom.Link,
+        { to: '/bets' },
+        _react2.default.createElement(
+          'button',
+          null,
+          'Bets'
+        )
+      ),
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/members' },
+        _react2.default.createElement(
+          'button',
+          null,
+          'Members'
+        )
+      ),
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/calculator' },
+        _react2.default.createElement(
+          'button',
+          null,
+          'Calculator'
+        )
       )
-    )
+    ),
+    _react2.default.createElement(_Login2.default, null),
+    _react2.default.createElement(_Balance2.default, null)
   );
 };
 
