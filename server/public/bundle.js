@@ -29762,6 +29762,14 @@ var _Timetable = __webpack_require__(109);
 
 var _Timetable2 = _interopRequireDefault(_Timetable);
 
+var _Balance = __webpack_require__(102);
+
+var _Balance2 = _interopRequireDefault(_Balance);
+
+var _Login = __webpack_require__(101);
+
+var _Login2 = _interopRequireDefault(_Login);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29830,7 +29838,11 @@ var Home = function (_React$Component) {
             { className: 'col-md-6' },
             _react2.default.createElement(_Timetable2.default, null)
           ),
-          _react2.default.createElement('div', { className: 'col-md-3' })
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-3' },
+            _react2.default.createElement(_Balance2.default, null)
+          )
         ),
         _react2.default.createElement(
           'div',
@@ -29842,7 +29854,11 @@ var Home = function (_React$Component) {
             _react2.default.createElement(_Leaderboard2.default, {
               percentColour: this.percentColour })
           ),
-          _react2.default.createElement('div', { className: 'col-md-3' })
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-3' },
+            _react2.default.createElement(_Login2.default, null)
+          )
         )
       );
     }
@@ -29875,14 +29891,6 @@ var _react = __webpack_require__(0);
 var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(6);
-
-var _Login = __webpack_require__(101);
-
-var _Login2 = _interopRequireDefault(_Login);
-
-var _Balance = __webpack_require__(102);
-
-var _Balance2 = _interopRequireDefault(_Balance);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29934,9 +29942,7 @@ var Header = function Header() {
           'Calculator'
         )
       )
-    ),
-    _react2.default.createElement(_Login2.default, null),
-    _react2.default.createElement(_Balance2.default, null)
+    )
   );
 };
 

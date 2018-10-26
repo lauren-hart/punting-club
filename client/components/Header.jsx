@@ -1,7 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Login from './Login'
-import Balance from './Balance'
 
 const Header = () => (
   <div>
@@ -13,8 +11,6 @@ const Header = () => (
       <Link to="/calculator"><button>Calculator</button></Link>
       {/* <Link to="/horoscopes"><button>Horoscopes</button></Link> */}
     </div>
-    <Login />
-    <Balance />
   </div>
 )
 
