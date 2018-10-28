@@ -337,3 +337,12 @@ body {
   text-align: center;
   padding: 2%
 }
+
+.nav-button:hover {
+  background-color: #908EAE;
+  color: white
+}
+
+.nav-button:active {
+  transform: translateY(4px);
+}
