@@ -52,7 +52,7 @@
 
 .header {
   font-family: 'Montserrat', sans-serif;
-  margin: 1%
+  margin: 1%;
 }
 
 .nav {
@@ -110,7 +110,8 @@ body {
   margin-top: 5%;
   font-weight: bolder;
   width: 60%;
-  text-align: center
+  text-align: center;
+  padding: 1%
 
 }
 
@@ -316,8 +317,8 @@ body {
   width: 140px;
   padding: 3% 0;
   margin: 5% 0;
-  background: white;
-
+  background: #10642B;
+  color: white
 }
 
 .btn-group-vertical {
@@ -339,7 +340,7 @@ body {
 }
 
 .nav-button:hover {
-  background-color: #908EAE;
+  background-color: rgb(104, 179, 128);
   color: white
 }
 
