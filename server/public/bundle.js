@@ -29762,6 +29762,10 @@ var _Timetable = __webpack_require__(109);
 
 var _Timetable2 = _interopRequireDefault(_Timetable);
 
+var _Balance = __webpack_require__(102);
+
+var _Balance2 = _interopRequireDefault(_Balance);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29769,9 +29773,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// import Balance from './Balance'
 // import Login from './Login'
+
 
 var Home = function (_React$Component) {
   _inherits(Home, _React$Component);
@@ -29834,7 +29837,8 @@ var Home = function (_React$Component) {
           { className: 'leaderboard' },
           _react2.default.createElement(_Leaderboard2.default, {
             percentColour: this.percentColour })
-        )
+        ),
+        _react2.default.createElement(_Balance2.default, null)
       );
     }
   }]);
@@ -29925,7 +29929,87 @@ exports.default = Header;
 
 /***/ }),
 /* 101 */,
-/* 102 */,
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(3);
+
+var _accounting = __webpack_require__(21);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Balance = function (_React$Component) {
+  _inherits(Balance, _React$Component);
+
+  function Balance(props) {
+    _classCallCheck(this, Balance);
+
+    var _this = _possibleConstructorReturn(this, (Balance.__proto__ || Object.getPrototypeOf(Balance)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Balance, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {}
+  }, {
+    key: 'render',
+    value: function render() {
+      var amountBet = this.props.rawBets && this.props.rawBets.map(function (item) {
+        return isNaN(item.amountWon) ? Number(0) : Number(item.amountWon);
+      });
+      var totalAmountBet = amountBet && amountBet.reduce(function (a, b) {
+        return a + b;
+      }, 0);
+      return _react2.default.createElement(
+        'div',
+        { className: 'balance' },
+        _react2.default.createElement(
+          'h4',
+          null,
+          'Holiday Fund'
+        ),
+        _react2.default.createElement(
+          'h4',
+          null,
+          _accounting.accounting.formatMoney(totalAmountBet)
+        )
+      );
+    }
+  }]);
+
+  return Balance;
+}(_react2.default.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    rawBets: state.bets.rawBets
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Balance);
+
+/***/ }),
 /* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 

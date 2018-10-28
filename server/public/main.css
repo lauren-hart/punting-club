@@ -1,5 +1,5 @@
 * { 
-  outline: 1px solid #947676 !important; 
+  outline: 1px transparent #947676 !important; 
   } 
   
    * { 
@@ -35,7 +35,7 @@
     background-size: cover !important;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: blur(0.5px) brightness(100%);
+    filter: blur(0.7px) brightness(70%);
     min-height: 100vh;
     height: 100%;
     width: 100vw;
@@ -103,14 +103,15 @@ body {
 .timetable-box {
   background: #EFEEEE;
   color:black;
-  font-size: 1.1em;
+  font-size: 1.2em;
   opacity: 0.8;
-  line-height: 1.8;
-  width: 90%;
-  margin-top: 20%;
-  text-align: center;
-  margin-left: auto;
-  padding: 2%
+  width: 100%;
+  margin-left: 30%;
+  margin-top: 5%;
+  font-weight: bolder;
+  width: 60%;
+  text-align: center
+
 }
 
 .bg-green {
@@ -326,9 +327,13 @@ body {
 .balance {
   background: #EFEEEE;
   color:black;
-  font-size: 1.1em;
+  font-size: 1.2em;
   opacity: 0.8;
-  width: 80%;
+  width: 100%;
+  margin-left: 30%;
+  margin-top: 5%;
+  font-weight: bolder;
+  width: 60%;
   text-align: center;
-  margin: 15%
+  padding: 2%
 }

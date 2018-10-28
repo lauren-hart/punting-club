@@ -11,6 +11,7 @@ const Header = () => (
       <Link to="/calculator"><button className="nav-button">Calculator</button></Link>
       {/* <Link to="/horoscopes"><button className="nav-button">Horoscopes</button></Link> */}
     </div>
+
   </div>
 )
 
