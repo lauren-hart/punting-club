@@ -78,9 +78,13 @@ body {
 .table-leaderboard {
   background: #EFEEEE;
   color:black;
-  font-size: 1.1em;
+  font-size: 1.2em;
   opacity: 0.8;
-  margin-top:3%
+  width: 100%;
+  margin-left: 30%;
+  margin-top: 5%;
+  font-weight: bolder;
+  width: 60%
 }
 
 .bets {
@@ -102,8 +106,8 @@ body {
   font-size: 1.1em;
   opacity: 0.8;
   line-height: 1.8;
-  width: 70%;
-  margin-top: 6%;
+  width: 90%;
+  margin-top: 20%;
   text-align: center;
   margin-left: auto;
   padding: 2%
@@ -139,7 +143,8 @@ body {
 } */
 
 .leaderboard-h3 {
-  padding: 2% 0
+  padding: 2% 0;
+  text-align: center
 }
 
 .input-name {
@@ -292,7 +297,7 @@ body {
 
 .sidebar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 260px; /* Set the width of the sidebar */
+  width: 25%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -302,7 +307,7 @@ body {
   padding-top: 20px;
   text-align: center;
   color: black;
-  opacity: 0.7;
+  opacity: 1.0;
 }
 
 .nav-button {

@@ -29826,19 +29826,14 @@ var Home = function (_React$Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'row' },
-          _react2.default.createElement('div', { className: 'col-md-3' }),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-md-6 leaderboard' },
-            _react2.default.createElement(_Leaderboard2.default, {
-              percentColour: this.percentColour })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-md-3 timetable' },
-            _react2.default.createElement(_Timetable2.default, null)
-          )
+          { className: 'timetable' },
+          _react2.default.createElement(_Timetable2.default, null)
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'leaderboard' },
+          _react2.default.createElement(_Leaderboard2.default, {
+            percentColour: this.percentColour })
         )
       );
     }
