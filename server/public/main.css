@@ -1,5 +1,5 @@
 * { 
-  outline: 1px transparent #947676 !important; 
+  outline: 1px solid #947676 !important; 
   } 
   
    * { 
@@ -80,6 +80,7 @@ body {
   color:black;
   font-size: 1.1em;
   opacity: 0.8;
+  margin-top:3%
 }
 
 .bets {
@@ -95,17 +96,17 @@ body {
   font-size: 1.1em
 }
 
-.timetable {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20%;
-  text-align: center;
-  margin: 3% 0 5% 0;
+.timetable-box {
   background: #EFEEEE;
   color:black;
   font-size: 1.1em;
   opacity: 0.8;
-  line-height: 1.8                                                                                                                                                                                              em;
+  line-height: 1.8;
+  width: 70%;
+  margin-top: 6%;
+  text-align: center;
+  margin-left: auto;
+  padding: 2%
 }
 
 .bg-green {
@@ -130,14 +131,15 @@ body {
   align-items: center;
 }
 
-.leaderboard {
+/* .leaderboard {
   margin-left: auto;
   margin-right: auto;
-  text-align: center
-}
+  text-align: center;
+  margin-top: 1%
+} */
 
 .leaderboard-h3 {
-  padding: 3% 0
+  padding: 2% 0
 }
 
 .input-name {
@@ -290,7 +292,7 @@ body {
 
 .sidebar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 250px; /* Set the width of the sidebar */
+  width: 260px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */

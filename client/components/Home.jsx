@@ -41,15 +41,7 @@ class Home extends React.Component {
           <Header />
           <Footer />
         </div>
-        <div className="row">
-          <div className="col-md-3"></div>
-          <div className="col-md-6">
-            <Timetable />
-          </div>
-          <div className="col-md-3">
-            {/* <Balance /> */}
-          </div>
-        </div>
+        {/* <Balance /> */}
 
         <div className="row">
           <div className="col-md-3"></div>
@@ -57,7 +49,8 @@ class Home extends React.Component {
             <Leaderboard
               percentColour={this.percentColour}/>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 timetable">
+            <Timetable />
             {/* <Login /> */}
           </div>
         </div>

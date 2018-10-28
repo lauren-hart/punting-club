@@ -29830,22 +29830,15 @@ var Home = function (_React$Component) {
           _react2.default.createElement('div', { className: 'col-md-3' }),
           _react2.default.createElement(
             'div',
-            { className: 'col-md-6' },
-            _react2.default.createElement(_Timetable2.default, null)
-          ),
-          _react2.default.createElement('div', { className: 'col-md-3' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'row' },
-          _react2.default.createElement('div', { className: 'col-md-3' }),
-          _react2.default.createElement(
-            'div',
             { className: 'col-md-6 leaderboard' },
             _react2.default.createElement(_Leaderboard2.default, {
               percentColour: this.percentColour })
           ),
-          _react2.default.createElement('div', { className: 'col-md-3' })
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-3 timetable' },
+            _react2.default.createElement(_Timetable2.default, null)
+          )
         )
       );
     }
@@ -31376,15 +31369,11 @@ var Timetable = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'timetable-box' },
         _react2.default.createElement(
-          'div',
-          { className: 'timetable' },
-          _react2.default.createElement(
-            'span',
-            null,
-            this.setWeekday()
-          )
+          'span',
+          null,
+          this.setWeekday()
         )
       );
     }
