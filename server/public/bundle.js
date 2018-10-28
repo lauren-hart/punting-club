@@ -31569,19 +31569,19 @@ var Bets = function (_React$Component) {
         null,
         _react2.default.createElement('div', { className: 'bg-grass' }),
         _react2.default.createElement(
-          'h1',
-          { className: 'header' },
-          'Bets'
-        ),
-        _react2.default.createElement(
           'div',
-          { className: 'nav' },
+          { className: 'top-bar' },
+          _react2.default.createElement(
+            'h1',
+            { className: 'bets-h1' },
+            'Bets'
+          ),
           _react2.default.createElement(
             _reactRouterDom.Link,
             { to: '/' },
             _react2.default.createElement(
               'button',
-              null,
+              { className: 'nav-button-top' },
               'Home'
             )
           ),
@@ -31590,7 +31590,7 @@ var Bets = function (_React$Component) {
             { to: '/bets' },
             _react2.default.createElement(
               'button',
-              null,
+              { className: 'nav-button-top' },
               'Bets'
             )
           ),
@@ -31599,18 +31599,18 @@ var Bets = function (_React$Component) {
             { to: '/members' },
             _react2.default.createElement(
               'button',
-              null,
+              { className: 'nav-button-top' },
               'Members'
             )
-          )
-        ),
-        _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: '/addbet' },
+          ),
           _react2.default.createElement(
-            'button',
-            { onClick: this.handleAdd, className: 'add-bet' },
-            'Add Bet'
+            _reactRouterDom.Link,
+            { to: '/addbet' },
+            _react2.default.createElement(
+              'button',
+              { onClick: this.handleAdd, className: 'add-bet add-button' },
+              'Add Bet'
+            )
           )
         ),
         _react2.default.createElement(
