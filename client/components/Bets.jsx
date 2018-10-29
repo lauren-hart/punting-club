@@ -49,13 +49,13 @@ class Bets extends React.Component {
     return (
       <div>
         <div className="bg-grass"></div>
-        <h1 className="header">Bets</h1>
-        <div className="nav">
-          <Link to="/"><button>Home</button></Link>
-          <Link to="/bets"><button>Bets</button></Link>
-          <Link to="/members"><button>Members</button></Link>
+        <div className="top-bar">
+          <h1 className="bets-h1">Bets</h1>
+          <Link to="/"><button className="nav-button-top">Home</button></Link>
+          <Link to="/bets"><button className="nav-button-top">Bets</button></Link>
+          <Link to="/members"><button className="nav-button-top">Members</button></Link>
+          <Link to="/addbet"><button onClick={this.handleAdd} className="add-bet add-button" >Add Bet</button></Link>
         </div>
-        <Link to="/addbet"><button onClick={this.handleAdd} className="add-bet" >Add Bet</button></Link>
 
         <table className="table bets">
           <thead>

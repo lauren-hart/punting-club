@@ -44,10 +44,8 @@ class Timetable extends React.Component {
 
   render () {
     return (
-      <div>
-        <div className="timetable">
-          <p>{this.setWeekday()}</p>
-        </div>
+      <div className="timetable-box">
+        <span>{this.setWeekday()}</span>
       </div>
     )
   }

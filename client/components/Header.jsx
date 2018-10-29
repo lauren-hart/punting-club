@@ -1,28 +1,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Login from './Login'
-import Balance from './Balance'
 
 const Header = () => (
   <div>
-    <div className="bg-grass"></div>
-    <div className="row">
-      <div className="col-md-4">
-        <h1 className="header">Punt Club</h1>
-        <div className="nav">
-          <Link to="/"><button>Home</button></Link>
-          <Link to="/bets"><button>Bets</button></Link>
-          <Link to="/members"><button>Members</button></Link>
-          <Link to="/calculator"><button>Calculator</button></Link>
-          {/* <Link to="/horoscopes"><button>Horoscopes</button></Link> */}
-        </div>
-        <Login />
-      </div>
-      <div className="col-md-4"></div>
-      <div className="col-md-4">
-        <Balance />
-      </div>
+    <h1 className="header">Punt Club</h1>
+    <div className="btn-group-vertical">
+      <Link to="/"><button className="nav-button">Home</button></Link>
+      <Link to="/bets"><button className="nav-button">Bets</button></Link>
+      <Link to="/members"><button className="nav-button">Members</button></Link>
+      <Link to="/calculator"><button className="nav-button">Calculator</button></Link>
+      {/* <Link to="/horoscopes"><button className="nav-button">Horoscopes</button></Link> */}
     </div>
+
   </div>
 )
 
