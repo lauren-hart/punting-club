@@ -68,6 +68,7 @@ footer {
 .table.bets {
   font-size: 0.9em;
   color: black;
+  opacity: 0.8
 }
 
 body {
@@ -299,7 +300,7 @@ body {
 
 .sidebar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 25%; /* Set the width of the sidebar */
+  width: 20%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -309,7 +310,7 @@ body {
   padding-top: 20px;
   text-align: center;
   color: black;
-  opacity: 1.0;
+  opacity: 0.8;
 }
 
 .top-bar {
@@ -366,7 +367,9 @@ body {
 .bets-h1 {
   display: inline-block;
   margin: 2% 5% 1% 1%;
-  color: white
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em
 }
 
 .add-button:hover {
@@ -384,6 +387,11 @@ body {
   color: black;
   margin-right: 2%;
   width: 100px
+}
+
+.member-header {
+  border-bottom: white solid 1px;
+  padding-bottom: 1%
 }
 
 

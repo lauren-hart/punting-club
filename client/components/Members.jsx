@@ -20,11 +20,10 @@ class Members extends React.Component {
     return (
       <div>
         <div className="bg-grass"></div>
-        <h1 className="header">Members</h1>
-        <div className="nav">
-          <Link to="/"><button>Home</button></Link>
-          <Link to="/bets"><button>Bets</button></Link>
-          <Link to="/members"><button>Members</button></Link>
+        <div className="top-bar member-header">
+          <h1 className="bets-h1">Members</h1>
+          <Link to="/"><button className="nav-button-top">Home</button></Link>
+          <Link to="/bets"><button className="nav-button-top">Bets</button></Link>
         </div>
         <table className="table members">
           <thead className="thead-dark">
@@ -85,9 +84,13 @@ class Members extends React.Component {
                 return <td key={item.id}>{item.email}</td>
               }
             })}</tr>
+            <tr>{this.props.members && this.props.members.map(item => {
+              if (item.couple === 'Burningham/Sim') {
+                return <td key={item.id}><img src={item.soloimage} /></td>
+              }
+            })}</tr>
           </tbody>
         </table>
-
         <Footer />
       </div>
 
